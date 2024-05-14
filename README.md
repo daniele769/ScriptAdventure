@@ -16,7 +16,8 @@ I professori potranno impostare le sessioni di esercizi attraverso una pagina di
 Sarà anche possibile configurare il tutto attraverso un file esterno che verrà creato automanticamente al percorso "Documents\ScriptAdventure\", in questo modo all'avvio il gioco verrà lanciato già con la modalità esercizio avviata e configurata.
 Alla fine della sessione di esercizi sarà possibile visionare una pagina di riepilogo che mostrerà il tempo impiegato e numero di errori per categoria, in modo da capire in quali argomenti sono presenti più lacune. 
 Importando il progetto sarà possibile creare nuovi esercizi o aggiungere nuove categorie, per capire come fare basta visionare la documentazione.
-![Modalità esercizio setup](https://github.com/daniele769/ScriptAdventure/assets/151225721/0158486f-8b4e-4fa2-b293-67e9555d527a) ![EsempioEsercizio](https://github.com/daniele769/ScriptAdventure/assets/151225721/93537b96-7f06-4190-830b-ca794e88d835)
+![Modalità esercizio setup](https://github.com/daniele769/ScriptAdventure/assets/151225721/0158486f-8b4e-4fa2-b293-67e9555d527a) ![EsempioErroreEsercizio](https://github.com/daniele769/ScriptAdventure/assets/151225721/70d1598a-be6e-4544-bcdb-8991c46c4872)
+
 
 
 
