@@ -1,0 +1,410 @@
+[gd_scene load_steps=17 format=3 uid="uid://bhpkvxd65sccb"]
+
+[ext_resource type="Script" path="res://Script/UI/Option/OptionControl.cs" id="1_pqt3f"]
+[ext_resource type="Script" path="res://Script/UI/Option/OptionSelectorUI.cs" id="2_4kcmt"]
+[ext_resource type="LabelSettings" uid="uid://wfyakha2ykdg" path="res://new_label_settings.tres" id="2_xdtff"]
+[ext_resource type="Script" path="res://Script/UI/CheckBox_Style.cs" id="4_6u7oy"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r2lys"]
+bg_color = Color(0.105882, 0.0941176, 0.0823529, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b6vvv"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0vshg"]
+bg_color = Color(0.741176, 0.741176, 0.741176, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ljtu6"]
+bg_color = Color(0.345098, 0.345098, 0.345098, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gg6c4"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5t3r8"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4u2qu"]
+bg_color = Color(0.741176, 0.741176, 0.741176, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bkv1r"]
+bg_color = Color(0.345098, 0.345098, 0.345098, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ltsfc"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o8iqr"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_tqirn"]
+font_size = 17
+
+[sub_resource type="LabelSettings" id="LabelSettings_75rd4"]
+font_size = 17
+
+[node name="Option" type="CanvasLayer" node_paths=PackedStringArray("backToMenuButton", "saveButton", "resSelector", "displaySelector", "ipBroker", "portBroker", "usernameBroker", "passwordBroker", "isBrokerConnectionOn", "musicSlider", "soundSlider")]
+script = ExtResource("1_pqt3f")
+backToMenuButton = NodePath("PanelContainer/VBoxContainer/Button_BackToMenu")
+saveButton = NodePath("PanelContainer/VBoxContainer/Button_Save")
+resSelector = NodePath("PanelContainer/VBoxContainer/GridContainer/VBoxContainer2/Raw-Resolution")
+displaySelector = NodePath("PanelContainer/VBoxContainer/GridContainer/VBoxContainer2/Raw-Display")
+ipBroker = NodePath("PanelContainer/VBoxContainer/GridContainer/VBoxContainer2/Raw3/LineEdit")
+portBroker = NodePath("PanelContainer/VBoxContainer/GridContainer/VBoxContainer2/Raw4/LineEdit")
+usernameBroker = NodePath("PanelContainer/VBoxContainer/GridContainer/VBoxContainer2/Raw5/LineEdit")
+passwordBroker = NodePath("PanelContainer/VBoxContainer/GridContainer/VBoxContainer2/Raw6/LineEdit")
+isBrokerConnectionOn = NodePath("PanelContainer/VBoxContainer/GridContainer/VBoxContainer2/Raw7/Check_BrokerConnection")
+musicSlider = NodePath("PanelContainer/VBoxContainer/GridContainer/VBoxContainer2/Raw2/PanelContainer/Slider_Audio")
+soundSlider = NodePath("PanelContainer/VBoxContainer/GridContainer/VBoxContainer2/Raw8/Slider_Audio")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_r2lys")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer"]
+layout_mode = 2
+
+[node name="Button_BackToMenu" type="Button" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 18
+theme_override_styles/normal = SubResource("StyleBoxFlat_b6vvv")
+theme_override_styles/hover = SubResource("StyleBoxFlat_0vshg")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ljtu6")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_gg6c4")
+text = " Torna al Menu "
+
+[node name="GridContainer" type="GridContainer" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+size_flags_stretch_ratio = 0.4
+columns = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+
+[node name="Raw-Display" type="HBoxContainer" parent="PanelContainer/VBoxContainer/GridContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer/GridContainer/VBoxContainer/Raw-Display"]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "Visualizzazione"
+label_settings = ExtResource("2_xdtff")
+horizontal_alignment = 2
+
+[node name="Raw-Resolution" type="HBoxContainer" parent="PanelContainer/VBoxContainer/GridContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer/GridContainer/VBoxContainer/Raw-Resolution"]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "Risoluzione"
+label_settings = ExtResource("2_xdtff")
+horizontal_alignment = 2
+
+[node name="Raw3" type="HBoxContainer" parent="PanelContainer/VBoxContainer/GridContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer/GridContainer/VBoxContainer/Raw3"]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "IP broker MQTT "
+label_settings = ExtResource("2_xdtff")
+horizontal_alignment = 2
+
+[node name="Raw4" type="HBoxContainer" parent="PanelContainer/VBoxContainer/GridContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer/GridContainer/VBoxContainer/Raw4"]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "Porta broker MQTT"
+label_settings = ExtResource("2_xdtff")
+horizontal_alignment = 2
+
+[node name="Raw5" type="HBoxContainer" parent="PanelContainer/VBoxContainer/GridContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer/GridContainer/VBoxContainer/Raw5"]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "Username broker MQTT "
+label_settings = ExtResource("2_xdtff")
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Raw6" type="HBoxContainer" parent="PanelContainer/VBoxContainer/GridContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer/GridContainer/VBoxContainer/Raw6"]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "Password broker MQTT"
+label_settings = ExtResource("2_xdtff")
+horizontal_alignment = 2
+vertical_alignment = 2
+
+[node name="Raw7" type="HBoxContainer" parent="PanelContainer/VBoxContainer/GridContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer/GridContainer/VBoxContainer/Raw7"]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "Connessione Broker"
+label_settings = ExtResource("2_xdtff")
+horizontal_alignment = 2
+vertical_alignment = 2
+
+[node name="Raw2" type="HBoxContainer" parent="PanelContainer/VBoxContainer/GridContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer/GridContainer/VBoxContainer/Raw2"]
+layout_mode = 2
+size_flags_horizontal = 0
+text = "Musica"
+label_settings = ExtResource("2_xdtff")
+horizontal_alignment = 2
+vertical_alignment = 2
+
+[node name="Raw8" type="HBoxContainer" parent="PanelContainer/VBoxContainer/GridContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer/GridContainer/VBoxContainer/Raw8"]
+layout_mode = 2
+size_flags_horizontal = 0
+text = "Suoni"
+label_settings = ExtResource("2_xdtff")
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="PanelContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_vertical = 6
+
+[node name="Raw-Display" type="HBoxContainer" parent="PanelContainer/VBoxContainer/GridContainer/VBoxContainer2" node_paths=PackedStringArray("leftButton", "rightButton", "label", "descriptionRow")]
+layout_mode = 2
+size_flags_horizontal = 4
+script = ExtResource("2_4kcmt")
+leftButton = NodePath("Button_DisLeft")
+rightButton = NodePath("Button_DisRight")
+label = NodePath("Label2")
+descriptionRow = NodePath("../../VBoxContainer/Raw-Display")
+
+[node name="Button_DisLeft" type="Button" parent="PanelContainer/VBoxContainer/GridContainer/VBoxContainer2/Raw-Display"]
+layout_mode = 2
+size_flags_horizontal = 8
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_5t3r8")
+theme_override_styles/hover = SubResource("StyleBoxFlat_4u2qu")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_bkv1r")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ltsfc")
+text = " < "
+
+[node name="Label2" type="Label" parent="PanelContainer/VBoxContainer/GridContainer/VBoxContainer2/Raw-Display"]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_o8iqr")
+text = " proxy text "
+label_settings = SubResource("LabelSettings_tqirn")
+
+[node name="Button_DisRight" type="Button" parent="PanelContainer/VBoxContainer/GridContainer/VBoxContainer2/Raw-Display"]
+layout_mode = 2
+size_flags_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_5t3r8")
+theme_override_styles/hover = SubResource("StyleBoxFlat_4u2qu")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_bkv1r")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ltsfc")
+text = " > "
+
+[node name="Raw-Resolution" type="HBoxContainer" parent="PanelContainer/VBoxContainer/GridContainer/VBoxContainer2" node_paths=PackedStringArray("leftButton", "rightButton", "label", "descriptionRow")]
+layout_mode = 2
+size_flags_horizontal = 4
+script = ExtResource("2_4kcmt")
+leftButton = NodePath("Button_ResLeft")
+rightButton = NodePath("Button_ResRight")
+label = NodePath("Label2")
+descriptionRow = NodePath("../../VBoxContainer/Raw-Resolution")
+
+[node name="Button_ResLeft" type="Button" parent="PanelContainer/VBoxContainer/GridContainer/VBoxContainer2/Raw-Resolution"]
+layout_mode = 2
+size_flags_horizontal = 8
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_5t3r8")
+theme_override_styles/hover = SubResource("StyleBoxFlat_4u2qu")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_bkv1r")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ltsfc")
+text = " < "
+
+[node name="Label2" type="Label" parent="PanelContainer/VBoxContainer/GridContainer/VBoxContainer2/Raw-Resolution"]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_o8iqr")
+text = " proxy text "
+label_settings = SubResource("LabelSettings_75rd4")
+
+[node name="Button_ResRight" type="Button" parent="PanelContainer/VBoxContainer/GridContainer/VBoxContainer2/Raw-Resolution"]
+layout_mode = 2
+size_flags_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_5t3r8")
+theme_override_styles/hover = SubResource("StyleBoxFlat_4u2qu")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_bkv1r")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ltsfc")
+text = " > "
+
+[node name="Raw3" type="HBoxContainer" parent="PanelContainer/VBoxContainer/GridContainer/VBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="LineEdit" type="LineEdit" parent="PanelContainer/VBoxContainer/GridContainer/VBoxContainer2/Raw3"]
+modulate = Color(100, 100, 100, 1)
+layout_mode = 2
+placeholder_text = "ex: name.broker.cloud"
+expand_to_text_length = true
+
+[node name="Raw4" type="HBoxContainer" parent="PanelContainer/VBoxContainer/GridContainer/VBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="LineEdit" type="LineEdit" parent="PanelContainer/VBoxContainer/GridContainer/VBoxContainer2/Raw4"]
+modulate = Color(100, 100, 100, 1)
+layout_mode = 2
+placeholder_text = "ex: 8080"
+expand_to_text_length = true
+
+[node name="Raw5" type="HBoxContainer" parent="PanelContainer/VBoxContainer/GridContainer/VBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="LineEdit" type="LineEdit" parent="PanelContainer/VBoxContainer/GridContainer/VBoxContainer2/Raw5"]
+modulate = Color(100, 100, 100, 1)
+layout_mode = 2
+placeholder_text = "username"
+expand_to_text_length = true
+
+[node name="Raw6" type="HBoxContainer" parent="PanelContainer/VBoxContainer/GridContainer/VBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="LineEdit" type="LineEdit" parent="PanelContainer/VBoxContainer/GridContainer/VBoxContainer2/Raw6"]
+modulate = Color(100, 100, 100, 1)
+layout_mode = 2
+placeholder_text = "password"
+secret = true
+expand_to_text_length = true
+
+[node name="Raw7" type="HBoxContainer" parent="PanelContainer/VBoxContainer/GridContainer/VBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Check_BrokerConnection" type="CheckBox" parent="PanelContainer/VBoxContainer/GridContainer/VBoxContainer2/Raw7"]
+modulate = Color(100, 100, 100, 1)
+layout_mode = 2
+theme_override_font_sizes/font_size = 19
+text = " "
+script = ExtResource("4_6u7oy")
+
+[node name="Raw2" type="HBoxContainer" parent="PanelContainer/VBoxContainer/GridContainer/VBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 3
+
+[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/VBoxContainer/GridContainer/VBoxContainer2/Raw2"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Slider_Audio" type="HSlider" parent="PanelContainer/VBoxContainer/GridContainer/VBoxContainer2/Raw2/PanelContainer"]
+modulate = Color(100, 100, 100, 1)
+custom_minimum_size = Vector2(200, 30)
+layout_mode = 2
+size_flags_vertical = 1
+min_value = -30.0
+max_value = 0.0
+value = -8.0
+
+[node name="Raw8" type="HBoxContainer" parent="PanelContainer/VBoxContainer/GridContainer/VBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 3
+
+[node name="Slider_Audio" type="HSlider" parent="PanelContainer/VBoxContainer/GridContainer/VBoxContainer2/Raw8"]
+modulate = Color(100, 100, 100, 1)
+custom_minimum_size = Vector2(200, 30)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+min_value = -30.0
+max_value = 0.0
+value = -8.0
+
+[node name="Button_Save" type="Button" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_b6vvv")
+theme_override_styles/hover = SubResource("StyleBoxFlat_0vshg")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ljtu6")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_gg6c4")
+text = " Salva "

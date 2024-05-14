@@ -1,0 +1,35 @@
+[gd_scene load_steps=4 format=3 uid="uid://b1w0p7827sf5d"]
+
+[ext_resource type="Script" path="res://Script/UI/DraggableSpawner.cs" id="1_n605f"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6njoa"]
+bg_color = Color(0.917647, 0.917647, 0.917647, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r5bao"]
+size = Vector2(1.05495, 0.973758)
+
+[node name="line_Spawner" type="PanelContainer"]
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_6njoa")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 18
+text = " proxy"
+
+[node name="Area2D" type="Area2D" parent="Label"]
+position = Vector2(27.9999, 16)
+scale = Vector2(52.135, 30.295)
+script = ExtResource("1_n605f")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Label/Area2D"]
+position = Vector2(-0.00958931, -0.0577642)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_r5bao")

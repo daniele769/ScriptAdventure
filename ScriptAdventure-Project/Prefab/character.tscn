@@ -1,0 +1,54 @@
+[gd_scene load_steps=7 format=3 uid="uid://boh1s1gbm5xgf"]
+
+[ext_resource type="Script" path="res://Script/CharMovementControl.cs" id="1_j1pbp"]
+[ext_resource type="Texture2D" uid="uid://dw0y0g4gjvi0o" path="res://Sprite/SpriteSheetDef.png" id="2_urt8q"]
+[ext_resource type="Script" path="res://Script/CharController.cs" id="3_hbu5r"]
+[ext_resource type="Script" path="res://Script/Focus_InteractiveObj.cs" id="4_77qbq"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_abj1c"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g7ukn"]
+size = Vector2(107, 76)
+
+[node name="Character" type="RigidBody2D"]
+position = Vector2(562.015, -797.403)
+collision_layer = 249
+collision_mask = 201
+physics_material_override = SubResource("PhysicsMaterial_abj1c")
+gravity_scale = 0.0
+max_contacts_reported = 1
+contact_monitor = true
+lock_rotation = true
+freeze = true
+freeze_mode = 1
+script = ExtResource("1_j1pbp")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 2
+texture = ExtResource("2_urt8q")
+hframes = 4
+vframes = 5
+frame = 17
+region_rect = Rect2(1, 1, 128, 256)
+script = ExtResource("3_hbu5r")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1.51501, 89)
+shape = SubResource("RectangleShape2D_g7ukn")
+debug_color = Color(0, 0.6, 0.701961, 0.380392)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(0.4, 0.4)
+
+[node name="RayCast2D" type="RayCast2D" parent="." node_paths=PackedStringArray("charController")]
+position = Vector2(-1, 89)
+target_position = Vector2(0, -100)
+collision_mask = 4
+hit_from_inside = true
+script = ExtResource("4_77qbq")
+charController = NodePath("../Sprite2D")
+
+[node name="AudioListener2D" type="AudioListener2D" parent="."]
+current = true
+
+[connection signal="DirectionChanged_" from="Sprite2D" to="RayCast2D" method="UpdateRaycastDirection"]

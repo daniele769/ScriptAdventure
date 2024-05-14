@@ -1,0 +1,76 @@
+[gd_scene load_steps=5 format=3 uid="uid://coaisqxjhdcg1"]
+
+[ext_resource type="Script" path="res://Script/DialogUiControl.cs" id="1_c1643"]
+[ext_resource type="Texture2D" uid="uid://dsjk67p2ps6fj" path="res://Sprite/prof.png" id="1_swg36"]
+[ext_resource type="AudioStream" uid="uid://bfyxh84w23kk0" path="res://Sound/Retro_Single_v3_wav.wav" id="2_3e0bt"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p7hlb"]
+bg_color = Color(1, 1, 1, 0.886275)
+
+[node name="DialogUi" type="Control" node_paths=PackedStringArray("textureRect", "nameLabel", "textLabel", "audioPlayer")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_c1643")
+textureRect = NodePath("VBoxContainer/PanelContainer/HBoxContainer/TextureRect")
+nameLabel = NodePath("VBoxContainer/PanelContainer/HBoxContainer/VBoxContainer/Name")
+textLabel = NodePath("VBoxContainer/PanelContainer/HBoxContainer/VBoxContainer/Text")
+audioPlayer = NodePath("AudioStreamPlayer")
+textSound = ExtResource("2_3e0bt")
+time = 0.055
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+offset_top = 0.449432
+offset_right = 1280.0
+offset_bottom = 719.551
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Empty" type="PanelContainer" parent="VBoxContainer"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="PanelContainer" type="PanelContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.3
+theme_override_styles/panel = SubResource("StyleBoxFlat_p7hlb")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/PanelContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/PanelContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("1_swg36")
+expand_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/PanelContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Name" type="Label" parent="VBoxContainer/PanelContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0.372549, 0.470588, 0.87451, 1)
+theme_override_colors/font_shadow_color = Color(0.372549, 0.470588, 0.87451, 1)
+theme_override_font_sizes/font_size = 20
+text = "Professore"
+vertical_alignment = 1
+
+[node name="Text" type="Label" parent="VBoxContainer/PanelContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 18
+autowrap_mode = 3
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+pitch_scale = 0.75
+bus = &"Se"

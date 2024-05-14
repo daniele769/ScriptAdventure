@@ -1,0 +1,55 @@
+[gd_scene load_steps=8 format=3 uid="uid://ch4icfyn55lf1"]
+
+[ext_resource type="Script" path="res://Script/ExerciseMode/BlockRow.cs" id="1_as50u"]
+[ext_resource type="LabelSettings" uid="uid://7k2v7xbt08ec" path="res://CommandLabelSetting.tres" id="1_vtkrj"]
+[ext_resource type="LabelSettings" uid="uid://wfyakha2ykdg" path="res://new_label_settings.tres" id="3_cam33"]
+[ext_resource type="Script" path="res://Script/ExerciseMode/InteractiveBox.cs" id="3_p57ow"]
+[ext_resource type="PackedScene" uid="uid://b7v11eyypvkxi" path="res://Prefab/button_WhiteRounded.tscn" id="4_nc8ph"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8ra5p"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y7pqr"]
+size = Vector2(47, 30)
+
+[node name="Row1" type="HBoxContainer" node_paths=PackedStringArray("clearButton")]
+script = ExtResource("1_as50u")
+clearButton = NodePath("ClearButton")
+
+[node name="Tab" type="Label" parent="."]
+layout_mode = 2
+size_flags_vertical = 0
+text = "             "
+label_settings = ExtResource("1_vtkrj")
+
+[node name="InteractiveBox" type="PanelContainer" parent="." node_paths=PackedStringArray("label")]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_8ra5p")
+script = ExtResource("3_p57ow")
+label = NodePath("TextBox")
+
+[node name="TextBox" type="Label" parent="InteractiveBox"]
+self_modulate = Color(0.188235, 0.32549, 0.890196, 1)
+layout_mode = 2
+text = "          "
+label_settings = ExtResource("3_cam33")
+
+[node name="Area2D" type="Area2D" parent="InteractiveBox/TextBox"]
+visible = false
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractiveBox/TextBox/Area2D"]
+position = Vector2(23.5, 15)
+shape = SubResource("RectangleShape2D_y7pqr")
+
+[node name="ClearButton" parent="." instance=ExtResource("4_nc8ph")]
+layout_mode = 2
+text = " + "

@@ -1,0 +1,672 @@
+[gd_scene load_steps=29 format=3 uid="uid://b0s4fujc3kaqr"]
+
+[ext_resource type="Theme" uid="uid://onha3popbng1" path="res://panelTransparent_Theme.tres" id="1_gy56f"]
+[ext_resource type="Script" path="res://Script/UI/ScriptBox_Control.cs" id="2_jqdpl"]
+[ext_resource type="LabelSettings" uid="uid://wfyakha2ykdg" path="res://new_label_settings.tres" id="3_pbwqg"]
+[ext_resource type="Script" path="res://Script/UI/DraggableSpawner.cs" id="4_43c0r"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_t53l1"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_paqny"]
+bg_color = Color(0, 0, 0.0156863, 0.85098)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kxxpr"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8ra5p"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y7pqr"]
+size = Vector2(47, 30)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pkv6i"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_e50wi"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_o61ne"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_y1db2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_uaffd"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ocdk7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wuh2o"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_r56lf"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_aurkk"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hoenc"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sdpv6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0a4pp"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2a5ia"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1ilix"]
+bg_color = Color(0.705882, 0.705882, 0.705882, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pvd8j"]
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wlbca"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2htyb"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wmqgv"]
+bg_color = Color(0, 0, 0, 0.788235)
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tbdf3"]
+size = Vector2(1.15086, 0.973758)
+
+[node name="ScriptBox_Anim" type="PanelContainer"]
+anchors_preset = -1
+anchor_left = -0.141906
+anchor_top = 0.728
+anchor_right = 0.244906
+anchor_bottom = 1.48878
+offset_left = 549.64
+offset_top = -472.16
+offset_right = 594.52
+offset_bottom = -426.92
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+theme = ExtResource("1_gy56f")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_t53l1")
+script = ExtResource("2_jqdpl")
+metadata/_edit_use_anchors_ = true
+metadata/Solution = ["string", "float", "int", "int", "int"]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+text = " x "
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Code_Container" type="PanelContainer" parent="VBoxContainer/HBoxContainer"]
+self_modulate = Color(1, 0.984314, 1, 1)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 8.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_paqny")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer/Code_Container"]
+layout_mode = 2
+
+[node name="row 1" type="PanelContainer" parent="VBoxContainer/HBoxContainer/Code_Container/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_kxxpr")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/HBoxContainer/Code_Container/VBoxContainer/row 1"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="PanelContainer" type="PanelContainer" parent="VBoxContainer/HBoxContainer/Code_Container/VBoxContainer/row 1/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_8ra5p")
+
+[node name="Label3" type="Label" parent="VBoxContainer/HBoxContainer/Code_Container/VBoxContainer/row 1/HBoxContainer/PanelContainer"]
+self_modulate = Color(1, 0, 0, 1)
+layout_mode = 2
+text = "          "
+label_settings = ExtResource("3_pbwqg")
+
+[node name="Area2D" type="Area2D" parent="VBoxContainer/HBoxContainer/Code_Container/VBoxContainer/row 1/HBoxContainer/PanelContainer/Label3"]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="VBoxContainer/HBoxContainer/Code_Container/VBoxContainer/row 1/HBoxContainer/PanelContainer/Label3/Area2D"]
+position = Vector2(23.5, 15)
+shape = SubResource("RectangleShape2D_y7pqr")
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/Code_Container/VBoxContainer/row 1/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_styles/normal = SubResource("StyleBoxFlat_pkv6i")
+text = "direction"
+label_settings = ExtResource("3_pbwqg")
+
+[node name="row 2" type="PanelContainer" parent="VBoxContainer/HBoxContainer/Code_Container/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_e50wi")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/HBoxContainer/Code_Container/VBoxContainer/row 2"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="PanelContainer" type="PanelContainer" parent="VBoxContainer/HBoxContainer/Code_Container/VBoxContainer/row 2/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_8ra5p")
+
+[node name="Label3" type="Label" parent="VBoxContainer/HBoxContainer/Code_Container/VBoxContainer/row 2/HBoxContainer/PanelContainer"]
+self_modulate = Color(1, 0, 0, 1)
+layout_mode = 2
+text = "          "
+label_settings = ExtResource("3_pbwqg")
+
+[node name="Area2D" type="Area2D" parent="VBoxContainer/HBoxContainer/Code_Container/VBoxContainer/row 2/HBoxContainer/PanelContainer/Label3"]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="VBoxContainer/HBoxContainer/Code_Container/VBoxContainer/row 2/HBoxContainer/PanelContainer/Label3/Area2D"]
+position = Vector2(23, 15)
+shape = SubResource("RectangleShape2D_y7pqr")
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/Code_Container/VBoxContainer/row 2/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+text = "time"
+label_settings = ExtResource("3_pbwqg")
+
+[node name="row 3" type="PanelContainer" parent="VBoxContainer/HBoxContainer/Code_Container/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_o61ne")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/HBoxContainer/Code_Container/VBoxContainer/row 3"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="Label2" type="Label" parent="VBoxContainer/HBoxContainer/Code_Container/VBoxContainer/row 3/HBoxContainer"]
+modulate = Color(1, 0, 0, 1)
+layout_mode = 2
+text = "private Ienumerator"
+label_settings = ExtResource("3_pbwqg")
+
+[node name="Label3" type="Label" parent="VBoxContainer/HBoxContainer/Code_Container/VBoxContainer/row 3/HBoxContainer"]
+modulate = Color(1, 1, 0, 1)
+layout_mode = 2
+text = " MakeAnimation"
+label_settings = ExtResource("3_pbwqg")
+
+[node name="Label4" type="Label" parent="VBoxContainer/HBoxContainer/Code_Container/VBoxContainer/row 3/HBoxContainer"]
+layout_mode = 2
+text = "()                                 "
+
+[node name="row 4" type="PanelContainer" parent="VBoxContainer/HBoxContainer/Code_Container/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_y1db2")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/HBoxContainer/Code_Container/VBoxContainer/row 4"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/Code_Container/VBoxContainer/row 4/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+text = "{"
+label_settings = ExtResource("3_pbwqg")
+
+[node name="row 5" type="PanelContainer" parent="VBoxContainer/HBoxContainer/Code_Container/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_uaffd")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/HBoxContainer/Code_Container/VBoxContainer/row 5"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/Code_Container/VBoxContainer/row 5/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+text = "     time = 0.12f;"
+label_settings = ExtResource("3_pbwqg")
+
+[node name="row 5_1" type="PanelContainer" parent="VBoxContainer/HBoxContainer/Code_Container/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_ocdk7")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/HBoxContainer/Code_Container/VBoxContainer/row 5_1"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/Code_Container/VBoxContainer/row 5_1/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+text = "     direction = "
+label_settings = ExtResource("3_pbwqg")
+
+[node name="Label2" type="Label" parent="VBoxContainer/HBoxContainer/Code_Container/VBoxContainer/row 5_1/HBoxContainer"]
+self_modulate = Color(1, 1, 0, 1)
+layout_mode = 2
+size_flags_vertical = 0
+text = "GetStringDirection"
+label_settings = ExtResource("3_pbwqg")
+
+[node name="Label3" type="Label" parent="VBoxContainer/HBoxContainer/Code_Container/VBoxContainer/row 5_1/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+text = "();"
+label_settings = ExtResource("3_pbwqg")
+
+[node name="row 5_2" type="PanelContainer" parent="VBoxContainer/HBoxContainer/Code_Container/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_ocdk7")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/HBoxContainer/Code_Container/VBoxContainer/row 5_2"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="Label4" type="Label" parent="VBoxContainer/HBoxContainer/Code_Container/VBoxContainer/row 5_2/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+text = "    "
+label_settings = ExtResource("3_pbwqg")
+
+[node name="PanelContainer" type="PanelContainer" parent="VBoxContainer/HBoxContainer/Code_Container/VBoxContainer/row 5_2/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_8ra5p")
+
+[node name="Label3" type="Label" parent="VBoxContainer/HBoxContainer/Code_Container/VBoxContainer/row 5_2/HBoxContainer/PanelContainer"]
+self_modulate = Color(1, 0, 0, 1)
+layout_mode = 2
+text = "          "
+label_settings = ExtResource("3_pbwqg")
+
+[node name="Area2D" type="Area2D" parent="VBoxContainer/HBoxContainer/Code_Container/VBoxContainer/row 5_2/HBoxContainer/PanelContainer/Label3"]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="VBoxContainer/HBoxContainer/Code_Container/VBoxContainer/row 5_2/HBoxContainer/PanelContainer/Label3/Area2D"]
+position = Vector2(23, 15)
+shape = SubResource("RectangleShape2D_y7pqr")
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/Code_Container/VBoxContainer/row 5_2/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+text = " firstFrame = "
+label_settings = ExtResource("3_pbwqg")
+
+[node name="Label2" type="Label" parent="VBoxContainer/HBoxContainer/Code_Container/VBoxContainer/row 5_2/HBoxContainer"]
+self_modulate = Color(1, 1, 0, 1)
+layout_mode = 2
+size_flags_vertical = 0
+text = "GetDirectionFirstFrame"
+label_settings = ExtResource("3_pbwqg")
+
+[node name="Label3" type="Label" parent="VBoxContainer/HBoxContainer/Code_Container/VBoxContainer/row 5_2/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+text = "();"
+label_settings = ExtResource("3_pbwqg")
+
+[node name="row 5_3" type="PanelContainer" parent="VBoxContainer/HBoxContainer/Code_Container/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_ocdk7")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/HBoxContainer/Code_Container/VBoxContainer/row 5_3"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="Label4" type="Label" parent="VBoxContainer/HBoxContainer/Code_Container/VBoxContainer/row 5_3/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+text = "    "
+label_settings = ExtResource("3_pbwqg")
+
+[node name="PanelContainer" type="PanelContainer" parent="VBoxContainer/HBoxContainer/Code_Container/VBoxContainer/row 5_3/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_8ra5p")
+
+[node name="Label3" type="Label" parent="VBoxContainer/HBoxContainer/Code_Container/VBoxContainer/row 5_3/HBoxContainer/PanelContainer"]
+self_modulate = Color(1, 0, 0, 1)
+layout_mode = 2
+text = "          "
+label_settings = ExtResource("3_pbwqg")
+
+[node name="Area2D" type="Area2D" parent="VBoxContainer/HBoxContainer/Code_Container/VBoxContainer/row 5_3/HBoxContainer/PanelContainer/Label3"]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="VBoxContainer/HBoxContainer/Code_Container/VBoxContainer/row 5_3/HBoxContainer/PanelContainer/Label3/Area2D"]
+position = Vector2(24, 15)
+shape = SubResource("RectangleShape2D_y7pqr")
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/Code_Container/VBoxContainer/row 5_3/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+text = " lastFrame = "
+label_settings = ExtResource("3_pbwqg")
+
+[node name="Label2" type="Label" parent="VBoxContainer/HBoxContainer/Code_Container/VBoxContainer/row 5_3/HBoxContainer"]
+self_modulate = Color(1, 1, 0, 1)
+layout_mode = 2
+size_flags_vertical = 0
+text = "GetDirectionLastFrame"
+label_settings = ExtResource("3_pbwqg")
+
+[node name="Label3" type="Label" parent="VBoxContainer/HBoxContainer/Code_Container/VBoxContainer/row 5_3/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+text = "();"
+label_settings = ExtResource("3_pbwqg")
+
+[node name="row 6" type="PanelContainer" parent="VBoxContainer/HBoxContainer/Code_Container/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_ocdk7")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/HBoxContainer/Code_Container/VBoxContainer/row 6"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/Code_Container/VBoxContainer/row 6/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+text = "     for("
+label_settings = ExtResource("3_pbwqg")
+
+[node name="PanelContainer" type="PanelContainer" parent="VBoxContainer/HBoxContainer/Code_Container/VBoxContainer/row 6/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_8ra5p")
+
+[node name="Label3" type="Label" parent="VBoxContainer/HBoxContainer/Code_Container/VBoxContainer/row 6/HBoxContainer/PanelContainer"]
+self_modulate = Color(1, 0, 0, 1)
+layout_mode = 2
+text = "          "
+label_settings = ExtResource("3_pbwqg")
+
+[node name="Area2D" type="Area2D" parent="VBoxContainer/HBoxContainer/Code_Container/VBoxContainer/row 6/HBoxContainer/PanelContainer/Label3"]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="VBoxContainer/HBoxContainer/Code_Container/VBoxContainer/row 6/HBoxContainer/PanelContainer/Label3/Area2D"]
+position = Vector2(24, 15)
+shape = SubResource("RectangleShape2D_y7pqr")
+
+[node name="Label2" type="Label" parent="VBoxContainer/HBoxContainer/Code_Container/VBoxContainer/row 6/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+text = " i = 0; i < firstFrame; i < lastFrame; i++)"
+label_settings = ExtResource("3_pbwqg")
+
+[node name="row 7" type="PanelContainer" parent="VBoxContainer/HBoxContainer/Code_Container/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_wuh2o")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/HBoxContainer/Code_Container/VBoxContainer/row 7"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/Code_Container/VBoxContainer/row 7/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+text = "     {"
+label_settings = ExtResource("3_pbwqg")
+
+[node name="row 8" type="PanelContainer" parent="VBoxContainer/HBoxContainer/Code_Container/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_r56lf")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/HBoxContainer/Code_Container/VBoxContainer/row 8"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/Code_Container/VBoxContainer/row 8/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+text = "          this.Frame = i;"
+label_settings = ExtResource("3_pbwqg")
+
+[node name="row 9" type="PanelContainer" parent="VBoxContainer/HBoxContainer/Code_Container/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_aurkk")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/HBoxContainer/Code_Container/VBoxContainer/row 9"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/Code_Container/VBoxContainer/row 9/HBoxContainer"]
+modulate = Color(1, 0, 0, 1)
+layout_mode = 2
+size_flags_vertical = 0
+text = "          yeld return "
+label_settings = ExtResource("3_pbwqg")
+
+[node name="Label2" type="Label" parent="VBoxContainer/HBoxContainer/Code_Container/VBoxContainer/row 9/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+text = "Timing."
+label_settings = ExtResource("3_pbwqg")
+
+[node name="Label3" type="Label" parent="VBoxContainer/HBoxContainer/Code_Container/VBoxContainer/row 9/HBoxContainer"]
+modulate = Color(1, 1, 0, 1)
+layout_mode = 2
+size_flags_vertical = 0
+text = "WaitForSecond"
+label_settings = ExtResource("3_pbwqg")
+
+[node name="Label4" type="Label" parent="VBoxContainer/HBoxContainer/Code_Container/VBoxContainer/row 9/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+text = "(time);"
+label_settings = ExtResource("3_pbwqg")
+
+[node name="row 10" type="PanelContainer" parent="VBoxContainer/HBoxContainer/Code_Container/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_hoenc")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/HBoxContainer/Code_Container/VBoxContainer/row 10"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/Code_Container/VBoxContainer/row 10/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+text = "     }"
+label_settings = ExtResource("3_pbwqg")
+
+[node name="row 11" type="PanelContainer" parent="VBoxContainer/HBoxContainer/Code_Container/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_sdpv6")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/HBoxContainer/Code_Container/VBoxContainer/row 11"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="Label3" type="Label" parent="VBoxContainer/HBoxContainer/Code_Container/VBoxContainer/row 11/HBoxContainer"]
+modulate = Color(1, 1, 0, 1)
+layout_mode = 2
+text = "     MakeAnimation"
+label_settings = ExtResource("3_pbwqg")
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/Code_Container/VBoxContainer/row 11/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+text = "(firstFrame, lastFrame);"
+label_settings = ExtResource("3_pbwqg")
+
+[node name="row 12" type="PanelContainer" parent="VBoxContainer/HBoxContainer/Code_Container/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_0a4pp")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/HBoxContainer/Code_Container/VBoxContainer/row 12"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/Code_Container/VBoxContainer/row 12/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+text = "}"
+label_settings = ExtResource("3_pbwqg")
+
+[node name="OutPut_Container" type="HBoxContainer" parent="VBoxContainer/HBoxContainer/Code_Container/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+
+[node name="Button_Check" type="Button" parent="VBoxContainer/HBoxContainer/Code_Container/VBoxContainer/OutPut_Container"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxFlat_2a5ia")
+theme_override_styles/hover = SubResource("StyleBoxFlat_1ilix")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_pvd8j")
+text = " Check "
+
+[node name="Output_Panel" type="PanelContainer" parent="VBoxContainer/HBoxContainer/Code_Container/VBoxContainer/OutPut_Container"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 8
+theme_override_styles/panel = SubResource("StyleBoxFlat_wlbca")
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/Code_Container/VBoxContainer/OutPut_Container/Output_Panel"]
+custom_minimum_size = Vector2(0, 63)
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_font_sizes/font_size = 20
+
+[node name="Type_Container" type="PanelContainer" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("1_gy56f")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_2htyb")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer/Type_Container"]
+layout_mode = 2
+
+[node name="string_Container" type="PanelContainer" parent="VBoxContainer/HBoxContainer/Type_Container/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_wmqgv")
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/Type_Container/VBoxContainer/string_Container"]
+layout_mode = 2
+text = " string "
+label_settings = ExtResource("3_pbwqg")
+
+[node name="Area2D" type="Area2D" parent="VBoxContainer/HBoxContainer/Type_Container/VBoxContainer/string_Container/Label"]
+position = Vector2(-277, -40.5)
+scale = Vector2(52.135, 30.295)
+script = ExtResource("4_43c0r")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="VBoxContainer/HBoxContainer/Type_Container/VBoxContainer/string_Container/Label/Area2D"]
+position = Vector2(5.88856, 1.80723)
+shape = SubResource("RectangleShape2D_tbdf3")
+
+[node name="int_Container" type="PanelContainer" parent="VBoxContainer/HBoxContainer/Type_Container/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_wmqgv")
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/Type_Container/VBoxContainer/int_Container"]
+layout_mode = 2
+text = "   int  "
+label_settings = ExtResource("3_pbwqg")
+
+[node name="Area2D" type="Area2D" parent="VBoxContainer/HBoxContainer/Type_Container/VBoxContainer/int_Container/Label"]
+position = Vector2(-277, -40.5)
+scale = Vector2(52.135, 30.295)
+script = ExtResource("4_43c0r")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="VBoxContainer/HBoxContainer/Type_Container/VBoxContainer/int_Container/Label/Area2D"]
+position = Vector2(5.88856, 1.83199)
+shape = SubResource("RectangleShape2D_tbdf3")
+
+[node name="float_Container" type="PanelContainer" parent="VBoxContainer/HBoxContainer/Type_Container/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_wmqgv")
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/Type_Container/VBoxContainer/float_Container"]
+layout_mode = 2
+text = "  float "
+label_settings = ExtResource("3_pbwqg")
+
+[node name="Area2D" type="Area2D" parent="VBoxContainer/HBoxContainer/Type_Container/VBoxContainer/float_Container/Label"]
+position = Vector2(-277, -40.5)
+scale = Vector2(52.135, 30.295)
+script = ExtResource("4_43c0r")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="VBoxContainer/HBoxContainer/Type_Container/VBoxContainer/float_Container/Label/Area2D"]
+position = Vector2(5.88856, 1.83199)
+shape = SubResource("RectangleShape2D_tbdf3")
+
+[connection signal="button_down" from="VBoxContainer/Button" to="." method="CloseBox"]
+[connection signal="button_down" from="VBoxContainer/HBoxContainer/Code_Container/VBoxContainer/OutPut_Container/Button_Check" to="." method="CheckAction"]

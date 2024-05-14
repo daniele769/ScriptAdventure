@@ -1,0 +1,158 @@
+[gd_scene load_steps=11 format=3 uid="uid://dd7d5mkj8hve2"]
+
+[ext_resource type="Script" path="res://Script/UI/DraggableSpawner.cs" id="1_l7qhd"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6njoa"]
+bg_color = Color(0.917647, 0.917647, 0.917647, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n083f"]
+size = Vector2(0.38362, 0.973758)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vbgfi"]
+bg_color = Color(0.917647, 0.917647, 0.917647, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_26wh5"]
+size = Vector2(0.402801, 0.973758)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4hj80"]
+bg_color = Color(0.917647, 0.917647, 0.917647, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3jfck"]
+size = Vector2(0.575429, 0.973758)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_71g32"]
+bg_color = Color(0.917647, 0.917647, 0.917647, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g8trm"]
+size = Vector2(0.498705, 0.973758)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_imjvb"]
+size = Vector2(0.589815, 0.973758)
+
+[node name="BoolOperator_Spawner" type="HBoxContainer"]
+
+[node name="line_Spawner2" type="PanelContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_6njoa")
+
+[node name="Label" type="Label" parent="line_Spawner2"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 18
+text = " < "
+
+[node name="Area2D" type="Area2D" parent="line_Spawner2/Label"]
+position = Vector2(9, 15)
+scale = Vector2(52.135, 30.295)
+script = ExtResource("1_l7qhd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="line_Spawner2/Label/Area2D"]
+position = Vector2(0.0191815, -0.0247554)
+shape = SubResource("RectangleShape2D_n083f")
+
+[node name="line_Spawner3" type="PanelContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_vbgfi")
+
+[node name="Label" type="Label" parent="line_Spawner3"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 18
+text = " > "
+
+[node name="Area2D" type="Area2D" parent="line_Spawner3/Label"]
+position = Vector2(8.99995, 14)
+scale = Vector2(52.135, 30.295)
+script = ExtResource("1_l7qhd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="line_Spawner3/Label/Area2D"]
+position = Vector2(0.0287729, 0.00825334)
+shape = SubResource("RectangleShape2D_26wh5")
+
+[node name="line_Spawner" type="PanelContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_4hj80")
+
+[node name="Label" type="Label" parent="line_Spawner"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 18
+text = " == "
+
+[node name="Area2D" type="Area2D" parent="line_Spawner/Label"]
+position = Vector2(15, 13)
+scale = Vector2(52.135, 30.295)
+script = ExtResource("1_l7qhd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="line_Spawner/Label/Area2D"]
+position = Vector2(-4.17233e-06, 0.0412621)
+shape = SubResource("RectangleShape2D_3jfck")
+
+[node name="line_Spawner4" type="PanelContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_71g32")
+
+[node name="Label" type="Label" parent="line_Spawner4"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 18
+text = " >="
+
+[node name="Area2D" type="Area2D" parent="line_Spawner4/Label"]
+position = Vector2(13, 14)
+scale = Vector2(52.135, 30.295)
+script = ExtResource("1_l7qhd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="line_Spawner4/Label/Area2D"]
+position = Vector2(-2.26498e-06, 0.00825334)
+shape = SubResource("RectangleShape2D_g8trm")
+
+[node name="line_Spawner5" type="PanelContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_vbgfi")
+
+[node name="Label" type="Label" parent="line_Spawner5"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 18
+text = " <= "
+
+[node name="Area2D" type="Area2D" parent="line_Spawner5/Label"]
+position = Vector2(14, 15)
+scale = Vector2(52.135, 30.295)
+script = ExtResource("1_l7qhd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="line_Spawner5/Label/Area2D"]
+position = Vector2(0.011987, -0.0247554)
+shape = SubResource("RectangleShape2D_imjvb")

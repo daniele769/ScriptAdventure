@@ -1,0 +1,553 @@
+[gd_scene load_steps=37 format=3 uid="uid://du8qk5i47h7rl"]
+
+[ext_resource type="Script" path="res://Script/UI/Exercise_Control.cs" id="1_kygu4"]
+[ext_resource type="PackedScene" uid="uid://b70ajvbxuv6lk" path="res://Prefab/UIElementExerciseMode/Spawner/for_int i_spawner.tscn" id="2_ri8k2"]
+[ext_resource type="Script" path="res://Script/UI/DraggableSpawner.cs" id="3_6kl1h"]
+[ext_resource type="LabelSettings" uid="uid://bga6cclu51h22" path="res://typeLabelSetting.tres" id="5_acevy"]
+[ext_resource type="PackedScene" uid="uid://dd7d5mkj8hve2" path="res://Prefab/UIElementExerciseMode/Spawner/bool_operator_spawner.tscn" id="5_nm5we"]
+[ext_resource type="LabelSettings" uid="uid://wfyakha2ykdg" path="res://new_label_settings.tres" id="6_duwub"]
+[ext_resource type="LabelSettings" uid="uid://40jkv60ohg5b" path="res://ClassLabelSetting.tres" id="7_2u2i3"]
+[ext_resource type="LabelSettings" uid="uid://ddioh58x44a2r" path="res://methodNameLabel.tres" id="8_jr0m3"]
+[ext_resource type="LabelSettings" uid="uid://7k2v7xbt08ec" path="res://CommandLabelSetting.tres" id="9_pyfja"]
+[ext_resource type="PackedScene" uid="uid://bs4umh4awq33g" path="res://Prefab/UIElementExerciseMode/InteractiveBox.tscn" id="10_lp5as"]
+[ext_resource type="PackedScene" uid="uid://dpp8o0n3m2wbs" path="res://Prefab/UIElementExerciseMode/tab.tscn" id="10_w5ol6"]
+[ext_resource type="PackedScene" uid="uid://bbqa2i6bpk840" path="res://Prefab/instruction_texture.tscn" id="12_gnjfq"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yoyy5"]
+bg_color = Color(0.105882, 0.0941176, 0.0823529, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vbgfi"]
+bg_color = Color(0.917647, 0.917647, 0.917647, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0tplb"]
+size = Vector2(0.589817, 0.973758)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_typkm"]
+bg_color = Color(0.917647, 0.917647, 0.917647, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a4jgo"]
+size = Vector2(2.24417, 0.973758)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w2usa"]
+bg_color = Color(0.917647, 0.917647, 0.917647, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5efk8"]
+size = Vector2(5.10214, 0.973758)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6njoa"]
+bg_color = Color(0.917647, 0.917647, 0.917647, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3eo81"]
+size = Vector2(0.383618, 0.973758)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8gqek"]
+size = Vector2(0.402799, 0.973758)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i317b"]
+size = Vector2(2.27295, 0.973758)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0esto"]
+bg_color = Color(0.105882, 0.0941176, 0.0823529, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_e50wi"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_o61ne"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_y1db2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_uaffd"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kxxpr"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pkv6i"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ocdk7"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bx7sx"]
+bg_color = Color(0.917647, 0.917647, 0.917647, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0gxb7"]
+bg_color = Color(0.917647, 0.917647, 0.917647, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cbpl8"]
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n12on"]
+bg_color = Color(0.282353, 0.282353, 0.282353, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_55cev"]
+
+[node name="VBox_Exercise" type="VBoxContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+script = ExtResource("1_kygu4")
+metadata/Solution = ["int n = GetNumeroIterazioni();", "for", "0", "<", "n", "++", "Operazioni();", "contatore++;"]
+metadata/BadSolutionCount = 0
+metadata/Hint = ["Prima di eseguire il for è necessario sapere QUANTE volte il ciclo deve essere ripetuto", "Una volta scoperto il numero di iterazioni, bisogna eseguire il for", "Non è presente il passo \"--\", pertanto sarà necessario partire da 0 a contare", "Se si parte da 0 a contare, bisognerà fermarsi prima di raggiungere il limite", "Il limite da raggiungere è il numero di iterazioni da eseguire", "L'ultimo valore da inserire nel for è il \"passo\", ovvero quanto e come dobbiamo incrementare \"i\" ad ogni ciclo", "Le ultime 2 operazioni e il loro ordine sono imposte dalla traccia, rileggila", "Le ultime 2 operazioni e il loro ordine sono imposte dalla traccia, rileggila"]
+metadata/BadSolution0 = []
+
+[node name="HBox_Viste" type="HBoxContainer" parent="."]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBox_Grab" type="VBoxContainer" parent="HBox_Viste"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="PanelContainer" type="PanelContainer" parent="HBox_Viste/VBox_Grab"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_yoyy5")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="HBox_Viste/VBox_Grab/PanelContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBox_Viste/VBox_Grab/PanelContainer/ScrollContainer"]
+layout_mode = 2
+
+[node name="For_Spawner" parent="HBox_Viste/VBox_Grab/PanelContainer/ScrollContainer/VBoxContainer" instance=ExtResource("2_ri8k2")]
+layout_mode = 2
+
+[node name="ForOperator_Spawner" type="HBoxContainer" parent="HBox_Viste/VBox_Grab/PanelContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="line_Spawner6" type="PanelContainer" parent="HBox_Viste/VBox_Grab/PanelContainer/ScrollContainer/VBoxContainer/ForOperator_Spawner"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_vbgfi")
+
+[node name="Label" type="Label" parent="HBox_Viste/VBox_Grab/PanelContainer/ScrollContainer/VBoxContainer/ForOperator_Spawner/line_Spawner6"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 18
+text = " ++ "
+
+[node name="Area2D" type="Area2D" parent="HBox_Viste/VBox_Grab/PanelContainer/ScrollContainer/VBoxContainer/ForOperator_Spawner/line_Spawner6/Label"]
+position = Vector2(22, 15)
+scale = Vector2(52.135, 30.295)
+script = ExtResource("3_6kl1h")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HBox_Viste/VBox_Grab/PanelContainer/ScrollContainer/VBoxContainer/ForOperator_Spawner/line_Spawner6/Label/Area2D"]
+position = Vector2(-0.141461, -0.0247552)
+shape = SubResource("RectangleShape2D_0tplb")
+
+[node name="BoolOperator_Spawner" parent="HBox_Viste/VBox_Grab/PanelContainer/ScrollContainer/VBoxContainer" instance=ExtResource("5_nm5we")]
+layout_mode = 2
+
+[node name="line_Spawner2" type="PanelContainer" parent="HBox_Viste/VBox_Grab/PanelContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_typkm")
+
+[node name="Label" type="Label" parent="HBox_Viste/VBox_Grab/PanelContainer/ScrollContainer/VBoxContainer/line_Spawner2"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 18
+text = " Operazioni();"
+
+[node name="Area2D" type="Area2D" parent="HBox_Viste/VBox_Grab/PanelContainer/ScrollContainer/VBoxContainer/line_Spawner2/Label"]
+position = Vector2(92.9999, 14)
+scale = Vector2(52.135, 30.295)
+script = ExtResource("3_6kl1h")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HBox_Viste/VBox_Grab/PanelContainer/ScrollContainer/VBoxContainer/line_Spawner2/Label/Area2D"]
+position = Vector2(-0.661741, 0.00825357)
+shape = SubResource("RectangleShape2D_a4jgo")
+
+[node name="line_Spawner" type="PanelContainer" parent="HBox_Viste/VBox_Grab/PanelContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_w2usa")
+
+[node name="Label" type="Label" parent="HBox_Viste/VBox_Grab/PanelContainer/ScrollContainer/VBoxContainer/line_Spawner"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 18
+text = " int n = GetNumeroIterazioni();"
+
+[node name="Area2D" type="Area2D" parent="HBox_Viste/VBox_Grab/PanelContainer/ScrollContainer/VBoxContainer/line_Spawner/Label"]
+position = Vector2(64, 15)
+scale = Vector2(52.135, 30.295)
+script = ExtResource("3_6kl1h")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HBox_Viste/VBox_Grab/PanelContainer/ScrollContainer/VBoxContainer/line_Spawner/Label/Area2D"]
+position = Vector2(1.32349, -0.0247556)
+shape = SubResource("RectangleShape2D_5efk8")
+
+[node name="line_Spawner4" type="PanelContainer" parent="HBox_Viste/VBox_Grab/PanelContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_6njoa")
+
+[node name="Label" type="Label" parent="HBox_Viste/VBox_Grab/PanelContainer/ScrollContainer/VBoxContainer/line_Spawner4"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 18
+text = " 0 "
+
+[node name="Area2D" type="Area2D" parent="HBox_Viste/VBox_Grab/PanelContainer/ScrollContainer/VBoxContainer/line_Spawner4/Label"]
+position = Vector2(27.9999, 16)
+scale = Vector2(52.135, 30.295)
+script = ExtResource("3_6kl1h")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HBox_Viste/VBox_Grab/PanelContainer/ScrollContainer/VBoxContainer/line_Spawner4/Label/Area2D"]
+position = Vector2(-0.345255, -0.0577645)
+shape = SubResource("RectangleShape2D_3eo81")
+
+[node name="line_Spawner5" type="PanelContainer" parent="HBox_Viste/VBox_Grab/PanelContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_6njoa")
+
+[node name="Label" type="Label" parent="HBox_Viste/VBox_Grab/PanelContainer/ScrollContainer/VBoxContainer/line_Spawner5"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 18
+text = " n "
+
+[node name="Area2D" type="Area2D" parent="HBox_Viste/VBox_Grab/PanelContainer/ScrollContainer/VBoxContainer/line_Spawner5/Label"]
+position = Vector2(27.9999, 16)
+scale = Vector2(52.135, 30.295)
+script = ExtResource("3_6kl1h")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HBox_Viste/VBox_Grab/PanelContainer/ScrollContainer/VBoxContainer/line_Spawner5/Label/Area2D"]
+position = Vector2(-0.335665, -0.0577641)
+shape = SubResource("RectangleShape2D_8gqek")
+
+[node name="line_Spawner3" type="PanelContainer" parent="HBox_Viste/VBox_Grab/PanelContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_typkm")
+
+[node name="Label" type="Label" parent="HBox_Viste/VBox_Grab/PanelContainer/ScrollContainer/VBoxContainer/line_Spawner3"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 18
+text = " contatore++;"
+
+[node name="Area2D" type="Area2D" parent="HBox_Viste/VBox_Grab/PanelContainer/ScrollContainer/VBoxContainer/line_Spawner3/Label"]
+position = Vector2(94.9999, 15)
+scale = Vector2(52.135, 30.295)
+script = ExtResource("3_6kl1h")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HBox_Viste/VBox_Grab/PanelContainer/ScrollContainer/VBoxContainer/line_Spawner3/Label/Area2D"]
+position = Vector2(-0.733672, -0.0247555)
+shape = SubResource("RectangleShape2D_i317b")
+
+[node name="VBox_Code" type="VBoxContainer" parent="HBox_Viste"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 2.5
+
+[node name="PanelContainer" type="PanelContainer" parent="HBox_Viste/VBox_Code"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_0esto")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="HBox_Viste/VBox_Code/PanelContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBox_RowContainer" type="VBoxContainer" parent="HBox_Viste/VBox_Code/PanelContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="row 2_1" type="PanelContainer" parent="HBox_Viste/VBox_Code/PanelContainer/ScrollContainer/VBox_RowContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_e50wi")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBox_Viste/VBox_Code/PanelContainer/ScrollContainer/VBox_RowContainer/row 2_1"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="Label" type="Label" parent="HBox_Viste/VBox_Code/PanelContainer/ScrollContainer/VBox_RowContainer/row 2_1/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+label_settings = ExtResource("7_2u2i3")
+
+[node name="row 3" type="PanelContainer" parent="HBox_Viste/VBox_Code/PanelContainer/ScrollContainer/VBox_RowContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_o61ne")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBox_Viste/VBox_Code/PanelContainer/ScrollContainer/VBox_RowContainer/row 3"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="Label2" type="Label" parent="HBox_Viste/VBox_Code/PanelContainer/ScrollContainer/VBox_RowContainer/row 3/HBoxContainer"]
+layout_mode = 2
+text = "public "
+label_settings = ExtResource("5_acevy")
+
+[node name="Label8" type="Label" parent="HBox_Viste/VBox_Code/PanelContainer/ScrollContainer/VBox_RowContainer/row 3/HBoxContainer"]
+layout_mode = 2
+text = "int"
+label_settings = ExtResource("5_acevy")
+
+[node name="Label3" type="Label" parent="HBox_Viste/VBox_Code/PanelContainer/ScrollContainer/VBox_RowContainer/row 3/HBoxContainer"]
+layout_mode = 2
+text = " Ripeti"
+label_settings = ExtResource("8_jr0m3")
+
+[node name="Label6" type="Label" parent="HBox_Viste/VBox_Code/PanelContainer/ScrollContainer/VBox_RowContainer/row 3/HBoxContainer"]
+layout_mode = 2
+text = "("
+label_settings = ExtResource("9_pyfja")
+
+[node name="Label9" type="Label" parent="HBox_Viste/VBox_Code/PanelContainer/ScrollContainer/VBox_RowContainer/row 3/HBoxContainer"]
+layout_mode = 2
+text = "int"
+label_settings = ExtResource("5_acevy")
+
+[node name="Label5" type="Label" parent="HBox_Viste/VBox_Code/PanelContainer/ScrollContainer/VBox_RowContainer/row 3/HBoxContainer"]
+layout_mode = 2
+text = " contatore"
+label_settings = ExtResource("6_duwub")
+
+[node name="Label4" type="Label" parent="HBox_Viste/VBox_Code/PanelContainer/ScrollContainer/VBox_RowContainer/row 3/HBoxContainer"]
+layout_mode = 2
+text = ")                                 "
+label_settings = ExtResource("9_pyfja")
+
+[node name="row 4" type="PanelContainer" parent="HBox_Viste/VBox_Code/PanelContainer/ScrollContainer/VBox_RowContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_y1db2")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBox_Viste/VBox_Code/PanelContainer/ScrollContainer/VBox_RowContainer/row 4"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="Label" type="Label" parent="HBox_Viste/VBox_Code/PanelContainer/ScrollContainer/VBox_RowContainer/row 4/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+text = "{"
+label_settings = ExtResource("6_duwub")
+
+[node name="row 7" type="PanelContainer" parent="HBox_Viste/VBox_Code/PanelContainer/ScrollContainer/VBox_RowContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_uaffd")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBox_Viste/VBox_Code/PanelContainer/ScrollContainer/VBox_RowContainer/row 7"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="Tab" parent="HBox_Viste/VBox_Code/PanelContainer/ScrollContainer/VBox_RowContainer/row 7/HBoxContainer" instance=ExtResource("10_w5ol6")]
+layout_mode = 2
+
+[node name="InteractiveBox" parent="HBox_Viste/VBox_Code/PanelContainer/ScrollContainer/VBox_RowContainer/row 7/HBoxContainer" instance=ExtResource("10_lp5as")]
+layout_mode = 2
+
+[node name="row 8" type="PanelContainer" parent="HBox_Viste/VBox_Code/PanelContainer/ScrollContainer/VBox_RowContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_uaffd")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBox_Viste/VBox_Code/PanelContainer/ScrollContainer/VBox_RowContainer/row 8"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="Tab" parent="HBox_Viste/VBox_Code/PanelContainer/ScrollContainer/VBox_RowContainer/row 8/HBoxContainer" instance=ExtResource("10_w5ol6")]
+layout_mode = 2
+
+[node name="InteractiveBox" parent="HBox_Viste/VBox_Code/PanelContainer/ScrollContainer/VBox_RowContainer/row 8/HBoxContainer" instance=ExtResource("10_lp5as")]
+layout_mode = 2
+
+[node name="row 9" type="PanelContainer" parent="HBox_Viste/VBox_Code/PanelContainer/ScrollContainer/VBox_RowContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_kxxpr")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBox_Viste/VBox_Code/PanelContainer/ScrollContainer/VBox_RowContainer/row 9"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="Tab" parent="HBox_Viste/VBox_Code/PanelContainer/ScrollContainer/VBox_RowContainer/row 9/HBoxContainer" instance=ExtResource("10_w5ol6")]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HBox_Viste/VBox_Code/PanelContainer/ScrollContainer/VBox_RowContainer/row 9/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_styles/normal = SubResource("StyleBoxFlat_pkv6i")
+text = "return "
+label_settings = ExtResource("9_pyfja")
+
+[node name="Label2" type="Label" parent="HBox_Viste/VBox_Code/PanelContainer/ScrollContainer/VBox_RowContainer/row 9/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_styles/normal = SubResource("StyleBoxFlat_pkv6i")
+text = "contatore;"
+label_settings = ExtResource("6_duwub")
+
+[node name="row 6" type="PanelContainer" parent="HBox_Viste/VBox_Code/PanelContainer/ScrollContainer/VBox_RowContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_ocdk7")
+
+[node name="Label" type="Label" parent="HBox_Viste/VBox_Code/PanelContainer/ScrollContainer/VBox_RowContainer/row 6"]
+layout_mode = 2
+size_flags_vertical = 0
+text = "}"
+label_settings = ExtResource("6_duwub")
+
+[node name="VBox_Instruction" type="VBoxContainer" parent="HBox_Viste"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ScrollContainer" type="ScrollContainer" parent="HBox_Viste/VBox_Instruction"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBox_Viste/VBox_Instruction/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Panel_Instruction" type="PanelContainer" parent="HBox_Viste/VBox_Instruction/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_bx7sx")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBox_Viste/VBox_Instruction/ScrollContainer/VBoxContainer/Panel_Instruction"]
+layout_mode = 2
+
+[node name="InstructionTexture" parent="HBox_Viste/VBox_Instruction/ScrollContainer/VBoxContainer/Panel_Instruction/VBoxContainer" instance=ExtResource("12_gnjfq")]
+layout_mode = 2
+
+[node name="Instruction" type="Label" parent="HBox_Viste/VBox_Instruction/ScrollContainer/VBoxContainer/Panel_Instruction/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Il metodo \"Ripeti()\" permette di eseguire il metodo \"Operazioni()\" tante volte quanto dice \"GetNumeroIterazioni()\".
+Inoltre la variabile contatore deve essere incrementata ad ogni ciclo e restituita a ciclo chiuso. 
+Come Imposizione da traccia, 	
+RICORDA DI INCREMENTARE IL CONTATORE SOLO DOPO AVER ESEGUITO IL METODO \"OPERAZIONI\"."
+horizontal_alignment = 1
+autowrap_mode = 2
+clip_text = true
+
+[node name="HBox_OutputBox" type="HBoxContainer" parent="."]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.1
+
+[node name="VBox_Button" type="VBoxContainer" parent="HBox_OutputBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+size_flags_stretch_ratio = 0.1
+
+[node name="CheckButton" type="Button" parent="HBox_OutputBox/VBox_Button"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 6
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_0gxb7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_cbpl8")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_n12on")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_55cev")
+text = " Check "
+
+[node name="NextButton" type="Button" parent="HBox_OutputBox/VBox_Button"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_0gxb7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_cbpl8")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_n12on")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_55cev")
+disabled = true
+text = " Next"
+
+[node name="Panel_Output" type="PanelContainer" parent="HBox_OutputBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_bx7sx")
+
+[node name="OutputLabel" type="Label" parent="HBox_OutputBox/Panel_Output"]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "
+
+"
+vertical_alignment = 1
+autowrap_mode = 2
+clip_text = true
+
+[connection signal="pressed" from="HBox_OutputBox/VBox_Button/CheckButton" to="." method="CheckAction"]

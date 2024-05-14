@@ -1,0 +1,138 @@
+[gd_scene load_steps=9 format=3 uid="uid://ifyw66gnhc5l"]
+
+[ext_resource type="Script" path="res://Script/ExerciseMode/Block_ExerciseControl.cs" id="1_k80e3"]
+[ext_resource type="LabelSettings" uid="uid://7k2v7xbt08ec" path="res://CommandLabelSetting.tres" id="2_pncjx"]
+[ext_resource type="LabelSettings" uid="uid://wfyakha2ykdg" path="res://new_label_settings.tres" id="4_t735l"]
+[ext_resource type="LabelSettings" uid="uid://bga6cclu51h22" path="res://typeLabelSetting.tres" id="5_1jxrj"]
+[ext_resource type="PackedScene" uid="uid://bs4umh4awq33g" path="res://Prefab/UIElementExerciseMode/InteractiveBox.tscn" id="6_wstom"]
+[ext_resource type="PackedScene" uid="uid://b7v11eyypvkxi" path="res://Prefab/button_WhiteRounded.tscn" id="7_svnat"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8ra5p"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5labd"]
+size = Vector2(35, 30)
+
+[node name="For_int i" type="VBoxContainer" node_paths=PackedStringArray("block", "removeButton")]
+script = ExtResource("1_k80e3")
+block = NodePath("For_Block")
+removeButton = NodePath("For_Definition/Button_Remove")
+
+[node name="For_Definition" type="HBoxContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="Label" type="Label" parent="For_Definition"]
+visible = false
+layout_mode = 2
+size_flags_vertical = 0
+text = "     if "
+label_settings = ExtResource("2_pncjx")
+
+[node name="Box" type="PanelContainer" parent="For_Definition"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_8ra5p")
+
+[node name="TextBox" type="Label" parent="For_Definition/Box"]
+layout_mode = 2
+text = " for "
+label_settings = ExtResource("2_pncjx")
+
+[node name="Area2D" type="Area2D" parent="For_Definition/Box/TextBox"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="For_Definition/Box/TextBox/Area2D"]
+position = Vector2(17.5, 15)
+shape = SubResource("RectangleShape2D_5labd")
+
+[node name="Label2" type="Label" parent="For_Definition"]
+layout_mode = 2
+size_flags_vertical = 0
+text = "("
+label_settings = ExtResource("4_t735l")
+
+[node name="Label8" type="Label" parent="For_Definition"]
+layout_mode = 2
+text = "int"
+label_settings = ExtResource("5_1jxrj")
+
+[node name="Label5" type="Label" parent="For_Definition"]
+layout_mode = 2
+size_flags_vertical = 0
+text = "i = "
+label_settings = ExtResource("4_t735l")
+
+[node name="InteractiveBox2" parent="For_Definition" instance=ExtResource("6_wstom")]
+layout_mode = 2
+
+[node name="Label6" type="Label" parent="For_Definition"]
+layout_mode = 2
+size_flags_vertical = 0
+text = " ; i"
+label_settings = ExtResource("4_t735l")
+
+[node name="InteractiveBox" parent="For_Definition" instance=ExtResource("6_wstom")]
+layout_mode = 2
+
+[node name="InteractiveBox3" parent="For_Definition" instance=ExtResource("6_wstom")]
+layout_mode = 2
+
+[node name="Label7" type="Label" parent="For_Definition"]
+layout_mode = 2
+size_flags_vertical = 0
+text = " ; i"
+label_settings = ExtResource("4_t735l")
+
+[node name="InteractiveBox4" parent="For_Definition" instance=ExtResource("6_wstom")]
+layout_mode = 2
+
+[node name="Label3" type="Label" parent="For_Definition"]
+layout_mode = 2
+size_flags_vertical = 0
+text = ")"
+label_settings = ExtResource("4_t735l")
+
+[node name="Label4" type="Label" parent="For_Definition"]
+layout_mode = 2
+size_flags_vertical = 0
+text = "           "
+label_settings = ExtResource("2_pncjx")
+
+[node name="Button_Remove" parent="For_Definition" instance=ExtResource("7_svnat")]
+layout_mode = 2
+text = " - "
+
+[node name="For_Open" type="Label" parent="."]
+layout_mode = 2
+size_flags_vertical = 0
+text = "     {"
+label_settings = ExtResource("2_pncjx")
+
+[node name="For_Block" type="VBoxContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="Row1" type="HBoxContainer" parent="For_Block"]
+layout_mode = 2
+
+[node name="Tab" type="Label" parent="For_Block/Row1"]
+layout_mode = 2
+size_flags_vertical = 0
+text = "             "
+label_settings = ExtResource("2_pncjx")
+
+[node name="InteractiveBox" parent="For_Block/Row1" instance=ExtResource("6_wstom")]
+layout_mode = 2
+
+[node name="For_Close" type="Label" parent="."]
+layout_mode = 2
+size_flags_vertical = 0
+text = "     }"
+label_settings = ExtResource("2_pncjx")

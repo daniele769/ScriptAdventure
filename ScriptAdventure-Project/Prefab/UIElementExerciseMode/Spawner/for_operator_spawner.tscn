@@ -1,0 +1,62 @@
+[gd_scene load_steps=5 format=3 uid="uid://bm1mo3cpks4nu"]
+
+[ext_resource type="Script" path="res://Script/UI/DraggableSpawner.cs" id="1_ejs5x"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vbgfi"]
+bg_color = Color(0.917647, 0.917647, 0.917647, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0tplb"]
+size = Vector2(0.589817, 0.973758)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5w4ou"]
+size = Vector2(0.41719, 0.973758)
+
+[node name="ForOperator_Spawner" type="HBoxContainer"]
+
+[node name="line_Spawner6" type="PanelContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_vbgfi")
+
+[node name="Label" type="Label" parent="line_Spawner6"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 18
+text = " ++ "
+
+[node name="Area2D" type="Area2D" parent="line_Spawner6/Label"]
+position = Vector2(22, 15)
+scale = Vector2(52.135, 30.295)
+script = ExtResource("1_ejs5x")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="line_Spawner6/Label/Area2D"]
+position = Vector2(-0.141461, -0.0247552)
+shape = SubResource("RectangleShape2D_0tplb")
+
+[node name="line_Spawner7" type="PanelContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_vbgfi")
+
+[node name="Label" type="Label" parent="line_Spawner7"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 18
+text = " -- "
+
+[node name="Area2D" type="Area2D" parent="line_Spawner7/Label"]
+position = Vector2(24.9999, 15)
+scale = Vector2(52.135, 30.295)
+script = ExtResource("1_ejs5x")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="line_Spawner7/Label/Area2D"]
+position = Vector2(-0.285317, -0.0247552)
+shape = SubResource("RectangleShape2D_5w4ou")

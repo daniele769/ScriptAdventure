@@ -1,0 +1,114 @@
+[gd_scene load_steps=10 format=3 uid="uid://1pslxlv460o4"]
+
+[ext_resource type="Script" path="res://Script/ExerciseMode/Block_ExerciseControl.cs" id="1_yh65c"]
+[ext_resource type="LabelSettings" uid="uid://7k2v7xbt08ec" path="res://CommandLabelSetting.tres" id="3_kh8cl"]
+[ext_resource type="PackedScene" uid="uid://bs4umh4awq33g" path="res://Prefab/UIElementExerciseMode/InteractiveBox.tscn" id="5_tcdhs"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8ra5p"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4vyjn"]
+size = Vector2(44, 30)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dq4i3"]
+bg_color = Color(0, 0.466667, 1, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ld43r"]
+bg_color = Color(0, 0.294118, 1, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j6mu8"]
+bg_color = Color(0, 0, 1, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_m3pcc"]
+
+[node name="else" type="VBoxContainer" node_paths=PackedStringArray("block", "removeButton")]
+script = ExtResource("1_yh65c")
+block = NodePath("else_Block")
+removeButton = NodePath("else_Definition/Button_Remove")
+
+[node name="else_Definition" type="HBoxContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="InteractiveBox4" type="PanelContainer" parent="else_Definition"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_8ra5p")
+
+[node name="TextBox" type="Label" parent="else_Definition/InteractiveBox4"]
+layout_mode = 2
+text = " else "
+label_settings = ExtResource("3_kh8cl")
+
+[node name="Area2D" type="Area2D" parent="else_Definition/InteractiveBox4/TextBox"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="else_Definition/InteractiveBox4/TextBox/Area2D"]
+position = Vector2(22, 15)
+shape = SubResource("RectangleShape2D_4vyjn")
+
+[node name="Label4" type="Label" parent="else_Definition"]
+layout_mode = 2
+size_flags_vertical = 0
+text = "                                           "
+label_settings = ExtResource("3_kh8cl")
+
+[node name="Button_Remove" type="Button" parent="else_Definition"]
+layout_mode = 2
+size_flags_horizontal = 8
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_dq4i3")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ld43r")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_j6mu8")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_m3pcc")
+text = " - "
+
+[node name="else_Open" type="Label" parent="."]
+layout_mode = 2
+size_flags_vertical = 0
+text = "     {"
+label_settings = ExtResource("3_kh8cl")
+
+[node name="else_Block" type="VBoxContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="Row1" type="HBoxContainer" parent="else_Block"]
+layout_mode = 2
+
+[node name="Tab" type="Label" parent="else_Block/Row1"]
+layout_mode = 2
+size_flags_vertical = 0
+text = "             "
+label_settings = ExtResource("3_kh8cl")
+
+[node name="InteractiveBox" parent="else_Block/Row1" instance=ExtResource("5_tcdhs")]
+layout_mode = 2
+
+[node name="else_Close" type="Label" parent="."]
+layout_mode = 2
+size_flags_vertical = 0
+text = "     }"
+label_settings = ExtResource("3_kh8cl")

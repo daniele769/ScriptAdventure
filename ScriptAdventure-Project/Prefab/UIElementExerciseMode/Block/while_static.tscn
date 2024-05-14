@@ -1,0 +1,122 @@
+[gd_scene load_steps=11 format=3 uid="uid://bdc83dmlml4qp"]
+
+[ext_resource type="LabelSettings" uid="uid://7k2v7xbt08ec" path="res://CommandLabelSetting.tres" id="2_tk7bh"]
+[ext_resource type="LabelSettings" uid="uid://wfyakha2ykdg" path="res://new_label_settings.tres" id="3_u6gfo"]
+[ext_resource type="PackedScene" uid="uid://bs4umh4awq33g" path="res://Prefab/UIElementExerciseMode/InteractiveBox.tscn" id="4_ewvku"]
+[ext_resource type="PackedScene" uid="uid://b7v11eyypvkxi" path="res://Prefab/button_WhiteRounded.tscn" id="5_qr22u"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8ra5p"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3v22s"]
+size = Vector2(56, 30)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x2lhf"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_faqce"]
+bg_color = Color(0.741176, 0.741176, 0.741176, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ihawj"]
+bg_color = Color(0.345098, 0.345098, 0.345098, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_j0maj"]
+
+[node name="While_Static" type="VBoxContainer"]
+
+[node name="While_Definition" type="HBoxContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="InteractiveBox4" type="PanelContainer" parent="While_Definition"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_8ra5p")
+
+[node name="TextBox" type="Label" parent="While_Definition/InteractiveBox4"]
+layout_mode = 2
+text = " while "
+label_settings = ExtResource("2_tk7bh")
+
+[node name="Area2D" type="Area2D" parent="While_Definition/InteractiveBox4/TextBox"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="While_Definition/InteractiveBox4/TextBox/Area2D"]
+position = Vector2(28, 15)
+shape = SubResource("RectangleShape2D_3v22s")
+
+[node name="Label2" type="Label" parent="While_Definition"]
+layout_mode = 2
+size_flags_vertical = 0
+text = "("
+label_settings = ExtResource("3_u6gfo")
+
+[node name="InteractiveBox" parent="While_Definition" instance=ExtResource("4_ewvku")]
+layout_mode = 2
+
+[node name="Label3" type="Label" parent="While_Definition"]
+layout_mode = 2
+size_flags_vertical = 0
+text = ")"
+label_settings = ExtResource("3_u6gfo")
+
+[node name="Label4" type="Label" parent="While_Definition"]
+layout_mode = 2
+size_flags_vertical = 0
+text = "           "
+label_settings = ExtResource("2_tk7bh")
+
+[node name="Button_Remove" parent="While_Definition" instance=ExtResource("5_qr22u")]
+visible = false
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_x2lhf")
+theme_override_styles/hover = SubResource("StyleBoxFlat_faqce")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ihawj")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_j0maj")
+text = " - "
+
+[node name="While_Open" type="Label" parent="."]
+layout_mode = 2
+size_flags_vertical = 0
+text = "     {"
+label_settings = ExtResource("2_tk7bh")
+
+[node name="While_Block" type="VBoxContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="Row1" type="HBoxContainer" parent="While_Block"]
+layout_mode = 2
+
+[node name="Tab" type="Label" parent="While_Block/Row1"]
+layout_mode = 2
+size_flags_vertical = 0
+text = "             "
+label_settings = ExtResource("2_tk7bh")
+
+[node name="InteractiveBox" parent="While_Block/Row1" instance=ExtResource("4_ewvku")]
+layout_mode = 2
+
+[node name="While_Close" type="Label" parent="."]
+layout_mode = 2
+size_flags_vertical = 0
+text = "     }"
+label_settings = ExtResource("2_tk7bh")

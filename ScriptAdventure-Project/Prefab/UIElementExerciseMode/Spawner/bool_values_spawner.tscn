@@ -1,0 +1,62 @@
+[gd_scene load_steps=5 format=3 uid="uid://clxpebcbtn1uf"]
+
+[ext_resource type="Script" path="res://Script/UI/DraggableSpawner.cs" id="1_mtyxs"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vbgfi"]
+bg_color = Color(0.917647, 0.917647, 0.917647, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lxkii"]
+size = Vector2(0.896712, 0.973758)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8nxc2"]
+size = Vector2(0.992618, 0.973758)
+
+[node name="BoolValues_Spawner" type="HBoxContainer"]
+
+[node name="true" type="PanelContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_vbgfi")
+
+[node name="Label" type="Label" parent="true"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 18
+text = " true "
+
+[node name="Area2D" type="Area2D" parent="true/Label"]
+position = Vector2(22, 15)
+scale = Vector2(52.135, 30.295)
+script = ExtResource("1_mtyxs")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="true/Label/Area2D"]
+position = Vector2(0.0119865, -0.0247554)
+shape = SubResource("RectangleShape2D_lxkii")
+
+[node name="false" type="PanelContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_vbgfi")
+
+[node name="Label" type="Label" parent="false"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 18
+text = " false "
+
+[node name="Area2D" type="Area2D" parent="false/Label"]
+position = Vector2(24.9999, 15)
+scale = Vector2(52.135, 30.295)
+script = ExtResource("1_mtyxs")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="false/Label/Area2D"]
+position = Vector2(0.00239706, -0.0247554)
+shape = SubResource("RectangleShape2D_8nxc2")

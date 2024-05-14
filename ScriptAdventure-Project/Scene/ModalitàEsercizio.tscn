@@ -1,0 +1,379 @@
+[gd_scene load_steps=21 format=3 uid="uid://pad8fmt5c272"]
+
+[ext_resource type="Script" path="res://Script/UI/ExerciseModeInitializer.cs" id="1_bhfbl"]
+[ext_resource type="Script" path="res://Script/UI/ExcerciseModeControl.cs" id="2_251nq"]
+[ext_resource type="Script" path="res://Script/UI/CheckBox_Style.cs" id="3_m2kgv"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ypvy4"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0gxb7"]
+bg_color = Color(0.917647, 0.917647, 0.917647, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cbpl8"]
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n12on"]
+bg_color = Color(0.282353, 0.282353, 0.282353, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_55cev"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_daev1"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r1p2v"]
+bg_color = Color(0.0196078, 0.0196078, 0.0196078, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c6kuw"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_damx2"]
+bg_color = Color(0.741176, 0.741176, 0.741176, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ol8mw"]
+bg_color = Color(0.345098, 0.345098, 0.345098, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_o8xkc"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7lesk"]
+bg_color = Color(0.105882, 0.0941176, 0.0823529, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7gooy"]
+bg_color = Color(0.0196078, 0.0196078, 0.0196078, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dq4i3"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ld43r"]
+bg_color = Color(0.741176, 0.741176, 0.741176, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j6mu8"]
+bg_color = Color(0.345098, 0.345098, 0.345098, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cm5qa"]
+
+[node name="ModalitàEsercizio" type="CanvasLayer"]
+
+[node name="ExerciseContainer" type="PanelContainer" parent="." node_paths=PackedStringArray("exerciseContainer", "labelCurrentExNumber", "labelMaxExNumber", "backToMenuButton", "timeLabel")]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ypvy4")
+script = ExtResource("1_bhfbl")
+exerciseContainer = NodePath("VBoxContainer")
+labelCurrentExNumber = NodePath("VBoxContainer/HBox_MenuBar/GridContainer/CurrentExNumber")
+labelMaxExNumber = NodePath("VBoxContainer/HBox_MenuBar/GridContainer/MaxExNumber")
+backToMenuButton = NodePath("VBoxContainer/HBox_MenuBar/BackToMenu")
+timeLabel = NodePath("VBoxContainer/HBox_MenuBar/Time")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ExerciseContainer"]
+layout_mode = 2
+
+[node name="HBox_MenuBar" type="HBoxContainer" parent="ExerciseContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.05
+
+[node name="GridContainer" type="GridContainer" parent="ExerciseContainer/VBoxContainer/HBox_MenuBar"]
+layout_mode = 2
+columns = 3
+
+[node name="CurrentExNumber" type="Label" parent="ExerciseContainer/VBoxContainer/HBox_MenuBar/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 1
+text = "0"
+horizontal_alignment = 2
+
+[node name="Label2" type="Label" parent="ExerciseContainer/VBoxContainer/HBox_MenuBar/GridContainer"]
+layout_mode = 2
+size_flags_vertical = 1
+text = "/"
+vertical_alignment = 1
+justification_flags = 171
+
+[node name="MaxExNumber" type="Label" parent="ExerciseContainer/VBoxContainer/HBox_MenuBar/GridContainer"]
+layout_mode = 2
+size_flags_vertical = 1
+text = "0"
+vertical_alignment = 1
+
+[node name="Time" type="Label" parent="ExerciseContainer/VBoxContainer/HBox_MenuBar"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 0
+text = "wwww"
+
+[node name="BackToMenu" type="Button" parent="ExerciseContainer/VBoxContainer/HBox_MenuBar"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_0gxb7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_cbpl8")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_n12on")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_55cev")
+text = " Torna al Menu "
+
+[node name="ControllerContainer" type="PanelContainer" parent="." node_paths=PackedStringArray("exerciseNumberSpinBox", "checkBaseLevel", "checkAdvancedLevel", "tryForHintSpinBox", "declarationSubject", "ifSubject", "forSubject", "whileSubject", "arraySubject", "structSubject", "backToMenuButton", "startButton", "exerciseModeInitializer")]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_daev1")
+script = ExtResource("2_251nq")
+exerciseNumberSpinBox = NodePath("VBoxContainer/SettingPanel/VBoxContainer/Raw1/ExcerciseNumber")
+checkBaseLevel = NodePath("VBoxContainer/SettingPanel/VBoxContainer/Raw2/Check_BaseLevel")
+checkAdvancedLevel = NodePath("VBoxContainer/SettingPanel/VBoxContainer/Raw2/Check_AdvancedLevel")
+tryForHintSpinBox = NodePath("VBoxContainer/SettingPanel/VBoxContainer/Raw3/TryForHint")
+declarationSubject = NodePath("VBoxContainer/SubjectPanel/VBoxContainer/HBoxContainer/VBoxContainer1/Raw1/CheckBox_Declaration")
+ifSubject = NodePath("VBoxContainer/SubjectPanel/VBoxContainer/HBoxContainer/VBoxContainer1/Raw2/CheckBox_If")
+forSubject = NodePath("VBoxContainer/SubjectPanel/VBoxContainer/HBoxContainer/VBoxContainer1/Raw3/CheckBox_For")
+whileSubject = NodePath("VBoxContainer/SubjectPanel/VBoxContainer/HBoxContainer/VBoxContainer1/Raw4/CheckBox_While")
+arraySubject = NodePath("VBoxContainer/SubjectPanel/VBoxContainer/HBoxContainer/VBoxContainer1/Raw5/CheckBox_Array")
+structSubject = NodePath("VBoxContainer/SubjectPanel/VBoxContainer/HBoxContainer/VBoxContainer1/Raw6/CheckBox_Struct")
+backToMenuButton = NodePath("VBoxContainer/MenuPanel2/Button_BackToMenu")
+startButton = NodePath("VBoxContainer/MenuPanel/Button_Start")
+exerciseModeInitializer = NodePath("../ExerciseContainer")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ControllerContainer"]
+layout_mode = 2
+
+[node name="MenuPanel2" type="PanelContainer" parent="ControllerContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_r1p2v")
+
+[node name="Button_BackToMenu" type="Button" parent="ControllerContainer/VBoxContainer/MenuPanel2"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_c6kuw")
+theme_override_styles/hover = SubResource("StyleBoxFlat_damx2")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ol8mw")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_o8xkc")
+text = " Torna al Menu "
+
+[node name="SettingPanel" type="PanelContainer" parent="ControllerContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.7
+theme_override_styles/panel = SubResource("StyleBoxFlat_7lesk")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ControllerContainer/VBoxContainer/SettingPanel"]
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="Raw0" type="HBoxContainer" parent="ControllerContainer/VBoxContainer/SettingPanel/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="ControllerContainer/VBoxContainer/SettingPanel/VBoxContainer/Raw0"]
+layout_mode = 2
+size_flags_horizontal = 6
+text = "Impostazioni"
+
+[node name="Raw1" type="HBoxContainer" parent="ControllerContainer/VBoxContainer/SettingPanel/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="ControllerContainer/VBoxContainer/SettingPanel/VBoxContainer/Raw1"]
+layout_mode = 2
+text = "N. esercizi per argomento e difficoltà:"
+
+[node name="ExcerciseNumber" type="SpinBox" parent="ControllerContainer/VBoxContainer/SettingPanel/VBoxContainer/Raw1"]
+modulate = Color(100, 100, 100, 1)
+layout_mode = 2
+min_value = 1.0
+value = 1.0
+alignment = 1
+
+[node name="Raw2" type="HBoxContainer" parent="ControllerContainer/VBoxContainer/SettingPanel/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="ControllerContainer/VBoxContainer/SettingPanel/VBoxContainer/Raw2"]
+layout_mode = 2
+text = "Livello difficoltà esercizi: "
+
+[node name="Check_BaseLevel" type="CheckBox" parent="ControllerContainer/VBoxContainer/SettingPanel/VBoxContainer/Raw2"]
+modulate = Color(100, 100, 100, 1)
+layout_mode = 2
+text = "Base"
+script = ExtResource("3_m2kgv")
+
+[node name="Check_AdvancedLevel" type="CheckBox" parent="ControllerContainer/VBoxContainer/SettingPanel/VBoxContainer/Raw2"]
+modulate = Color(100, 100, 100, 1)
+layout_mode = 2
+text = "Avanzato"
+script = ExtResource("3_m2kgv")
+
+[node name="Raw3" type="HBoxContainer" parent="ControllerContainer/VBoxContainer/SettingPanel/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="ControllerContainer/VBoxContainer/SettingPanel/VBoxContainer/Raw3"]
+layout_mode = 2
+text = "Numero tentativi per il consiglio"
+
+[node name="TryForHint" type="SpinBox" parent="ControllerContainer/VBoxContainer/SettingPanel/VBoxContainer/Raw3"]
+modulate = Color(100, 100, 100, 1)
+layout_mode = 2
+min_value = 1.0
+value = 3.0
+alignment = 1
+
+[node name="SubjectPanel" type="PanelContainer" parent="ControllerContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_7lesk")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ControllerContainer/VBoxContainer/SubjectPanel"]
+layout_mode = 2
+
+[node name="Raw0" type="HBoxContainer" parent="ControllerContainer/VBoxContainer/SubjectPanel/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="ControllerContainer/VBoxContainer/SubjectPanel/VBoxContainer/Raw0"]
+layout_mode = 2
+size_flags_horizontal = 6
+text = "Argomenti"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ControllerContainer/VBoxContainer/SubjectPanel/VBoxContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer1" type="VBoxContainer" parent="ControllerContainer/VBoxContainer/SubjectPanel/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Raw1" type="HBoxContainer" parent="ControllerContainer/VBoxContainer/SubjectPanel/VBoxContainer/HBoxContainer/VBoxContainer1"]
+layout_mode = 2
+
+[node name="CheckBox_Declaration" type="CheckBox" parent="ControllerContainer/VBoxContainer/SubjectPanel/VBoxContainer/HBoxContainer/VBoxContainer1/Raw1"]
+modulate = Color(100, 100, 100, 1)
+layout_mode = 2
+text = "Dichiarazione Variabili"
+script = ExtResource("3_m2kgv")
+
+[node name="Raw2" type="HBoxContainer" parent="ControllerContainer/VBoxContainer/SubjectPanel/VBoxContainer/HBoxContainer/VBoxContainer1"]
+layout_mode = 2
+
+[node name="CheckBox_If" type="CheckBox" parent="ControllerContainer/VBoxContainer/SubjectPanel/VBoxContainer/HBoxContainer/VBoxContainer1/Raw2"]
+modulate = Color(100, 100, 100, 1)
+layout_mode = 2
+text = "If"
+script = ExtResource("3_m2kgv")
+
+[node name="Raw3" type="HBoxContainer" parent="ControllerContainer/VBoxContainer/SubjectPanel/VBoxContainer/HBoxContainer/VBoxContainer1"]
+layout_mode = 2
+
+[node name="CheckBox_For" type="CheckBox" parent="ControllerContainer/VBoxContainer/SubjectPanel/VBoxContainer/HBoxContainer/VBoxContainer1/Raw3"]
+modulate = Color(100, 100, 100, 1)
+layout_mode = 2
+text = "Ciclo for"
+script = ExtResource("3_m2kgv")
+
+[node name="Raw4" type="HBoxContainer" parent="ControllerContainer/VBoxContainer/SubjectPanel/VBoxContainer/HBoxContainer/VBoxContainer1"]
+layout_mode = 2
+
+[node name="CheckBox_While" type="CheckBox" parent="ControllerContainer/VBoxContainer/SubjectPanel/VBoxContainer/HBoxContainer/VBoxContainer1/Raw4"]
+modulate = Color(100, 100, 100, 1)
+layout_mode = 2
+text = "Ciclo while"
+script = ExtResource("3_m2kgv")
+
+[node name="Raw5" type="HBoxContainer" parent="ControllerContainer/VBoxContainer/SubjectPanel/VBoxContainer/HBoxContainer/VBoxContainer1"]
+layout_mode = 2
+
+[node name="CheckBox_Array" type="CheckBox" parent="ControllerContainer/VBoxContainer/SubjectPanel/VBoxContainer/HBoxContainer/VBoxContainer1/Raw5"]
+modulate = Color(100, 100, 100, 1)
+layout_mode = 2
+text = "Array"
+script = ExtResource("3_m2kgv")
+
+[node name="Raw6" type="HBoxContainer" parent="ControllerContainer/VBoxContainer/SubjectPanel/VBoxContainer/HBoxContainer/VBoxContainer1"]
+layout_mode = 2
+
+[node name="CheckBox_Struct" type="CheckBox" parent="ControllerContainer/VBoxContainer/SubjectPanel/VBoxContainer/HBoxContainer/VBoxContainer1/Raw6"]
+modulate = Color(100, 100, 100, 1)
+layout_mode = 2
+text = "Struct"
+script = ExtResource("3_m2kgv")
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="ControllerContainer/VBoxContainer/SubjectPanel/VBoxContainer/HBoxContainer"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Raw1" type="HBoxContainer" parent="ControllerContainer/VBoxContainer/SubjectPanel/VBoxContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+
+[node name="CheckBox" type="CheckBox" parent="ControllerContainer/VBoxContainer/SubjectPanel/VBoxContainer/HBoxContainer/VBoxContainer2/Raw1"]
+layout_mode = 2
+text = "Dichiarazione Variabili"
+
+[node name="MenuPanel" type="PanelContainer" parent="ControllerContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_7gooy")
+
+[node name="Button_Start" type="Button" parent="ControllerContainer/VBoxContainer/MenuPanel"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_dq4i3")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ld43r")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_j6mu8")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_cm5qa")
+text = " Avvia Esercizi "
+
+[connection signal="pressed" from="ControllerContainer/VBoxContainer/MenuPanel/Button_Start" to="ControllerContainer" method="StartExercise"]

@@ -1,0 +1,37 @@
+[gd_scene load_steps=5 format=3 uid="uid://b7v11eyypvkxi"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dq4i3"]
+bg_color = Color(0, 0.466667, 1, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ld43r"]
+bg_color = Color(0, 0.294118, 1, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j6mu8"]
+bg_color = Color(0, 0, 1, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_m3pcc"]
+
+[node name="Button_BackToMenu" type="Button"]
+size_flags_horizontal = 8
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_dq4i3")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ld43r")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_j6mu8")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_m3pcc")
+text = " Torna al Menu "

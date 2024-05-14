@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=3 uid="uid://bs4umh4awq33g"]
+
+[ext_resource type="Script" path="res://Script/ExerciseMode/InteractiveBox.cs" id="1_4do0k"]
+[ext_resource type="LabelSettings" uid="uid://wfyakha2ykdg" path="res://new_label_settings.tres" id="1_rk280"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8ra5p"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y7pqr"]
+size = Vector2(47, 30)
+
+[node name="InteractiveBox" type="PanelContainer" node_paths=PackedStringArray("label")]
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_8ra5p")
+script = ExtResource("1_4do0k")
+label = NodePath("TextBox")
+
+[node name="TextBox" type="Label" parent="."]
+self_modulate = Color(0.188235, 0.32549, 0.890196, 1)
+layout_mode = 2
+text = "          "
+label_settings = ExtResource("1_rk280")
+
+[node name="Area2D" type="Area2D" parent="TextBox"]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TextBox/Area2D"]
+position = Vector2(23.5, 15)
+shape = SubResource("RectangleShape2D_y7pqr")

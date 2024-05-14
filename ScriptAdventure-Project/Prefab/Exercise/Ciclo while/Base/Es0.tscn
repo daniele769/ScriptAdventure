@@ -1,0 +1,591 @@
+[gd_scene load_steps=38 format=3 uid="uid://c5agy2lf16l8p"]
+
+[ext_resource type="Script" path="res://Script/UI/Exercise_Control.cs" id="1_q437m"]
+[ext_resource type="Script" path="res://Script/UI/DraggableSpawner.cs" id="2_ywqpy"]
+[ext_resource type="LabelSettings" uid="uid://bga6cclu51h22" path="res://typeLabelSetting.tres" id="3_aeftf"]
+[ext_resource type="PackedScene" uid="uid://bwg4gowmy1p72" path="res://Prefab/UIElementExerciseMode/Spawner/if_1arg_spawner.tscn" id="3_porsb"]
+[ext_resource type="PackedScene" uid="uid://clxpebcbtn1uf" path="res://Prefab/UIElementExerciseMode/Spawner/bool_values_spawner.tscn" id="4_bukpr"]
+[ext_resource type="LabelSettings" uid="uid://wfyakha2ykdg" path="res://new_label_settings.tres" id="4_jlorq"]
+[ext_resource type="LabelSettings" uid="uid://40jkv60ohg5b" path="res://ClassLabelSetting.tres" id="5_qx8da"]
+[ext_resource type="LabelSettings" uid="uid://ddioh58x44a2r" path="res://methodNameLabel.tres" id="6_3g1p2"]
+[ext_resource type="LabelSettings" uid="uid://7k2v7xbt08ec" path="res://CommandLabelSetting.tres" id="7_v1gm4"]
+[ext_resource type="PackedScene" uid="uid://dpp8o0n3m2wbs" path="res://Prefab/UIElementExerciseMode/tab.tscn" id="8_c0e0r"]
+[ext_resource type="PackedScene" uid="uid://bs4umh4awq33g" path="res://Prefab/UIElementExerciseMode/InteractiveBox.tscn" id="9_4qpsl"]
+[ext_resource type="PackedScene" uid="uid://b7v11eyypvkxi" path="res://Prefab/button_WhiteRounded.tscn" id="10_n0v75"]
+[ext_resource type="PackedScene" uid="uid://bbqa2i6bpk840" path="res://Prefab/instruction_texture.tscn" id="13_7fleq"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yoyy5"]
+bg_color = Color(0.105882, 0.0941176, 0.0823529, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6njoa"]
+bg_color = Color(0.917647, 0.917647, 0.917647, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eootr"]
+size = Vector2(5.31313, 0.973758)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i375r"]
+size = Vector2(1.40021, 0.973758)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ol1hi"]
+size = Vector2(0.997409, 0.973758)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fsoxa"]
+size = Vector2(0.690514, 0.973758)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_atbpf"]
+size = Vector2(1.15086, 0.973758)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0esto"]
+bg_color = Color(0.105882, 0.0941176, 0.0823529, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_e50wi"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_o61ne"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_y1db2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_uaffd"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8ra5p"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3v22s"]
+size = Vector2(56, 30)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x2lhf"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_faqce"]
+bg_color = Color(0.741176, 0.741176, 0.741176, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ihawj"]
+bg_color = Color(0.345098, 0.345098, 0.345098, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_j0maj"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ocdk7"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bx7sx"]
+bg_color = Color(0.917647, 0.917647, 0.917647, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0gxb7"]
+bg_color = Color(0.917647, 0.917647, 0.917647, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cbpl8"]
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n12on"]
+bg_color = Color(0.282353, 0.282353, 0.282353, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_55cev"]
+
+[node name="VBox_Exercise" type="VBoxContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+script = ExtResource("1_q437m")
+metadata/Solution = ["int i = 0;", "while", "true", "i++;", "if", "i == n", "Console.WriteLine (\"int i = \" + i);", "break;"]
+metadata/BadSolutionCount = 0
+metadata/Hint = ["Come prima cosa devi dichiarare la variabile da incrementare. Dichiarandola nel while il suo valore verrebbe resettato ad ogni iterazione del ciclo", "", "Il while deve essere sempre vero, potremo chiuderlo forzatamente dopo come spiegato nella traccia", "La prima cosa da fare nel ciclo è incrementare la variabile", "Una volta incrementata \"i\" dobbiamo valutarne il valore per verificare se continuare o meno il ciclo", "Da traccia il ciclo deve continuare finchè \"i\" ed \"n\" non si eguagliano", "Una volta soddisfatta la condizione dobbiamo scrivere nella console il valore assunto da \"i\" e chiudere il ciclo, ma tutte le istruzioni successive allo stop del ciclo non verrano eseguite. Perciò vanno eseguite prima", "Come ultima cosa dobbiamo chiudere il ciclo, rileggi la traccia"]
+metadata/BadSolution0 = []
+
+[node name="HBox_Viste" type="HBoxContainer" parent="."]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBox_Grab" type="VBoxContainer" parent="HBox_Viste"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="PanelContainer" type="PanelContainer" parent="HBox_Viste/VBox_Grab"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_yoyy5")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="HBox_Viste/VBox_Grab/PanelContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBox_Viste/VBox_Grab/PanelContainer/ScrollContainer"]
+layout_mode = 2
+
+[node name="If_1arg_Spawner" parent="HBox_Viste/VBox_Grab/PanelContainer/ScrollContainer/VBoxContainer" instance=ExtResource("3_porsb")]
+layout_mode = 2
+
+[node name="BoolValues_Spawner" parent="HBox_Viste/VBox_Grab/PanelContainer/ScrollContainer/VBoxContainer" instance=ExtResource("4_bukpr")]
+layout_mode = 2
+
+[node name="line_Spawner6" type="PanelContainer" parent="HBox_Viste/VBox_Grab/PanelContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_6njoa")
+
+[node name="Label" type="Label" parent="HBox_Viste/VBox_Grab/PanelContainer/ScrollContainer/VBoxContainer/line_Spawner6"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 18
+text = " Console.WriteLine (\"int i = \" + i);"
+
+[node name="Area2D" type="Area2D" parent="HBox_Viste/VBox_Grab/PanelContainer/ScrollContainer/VBoxContainer/line_Spawner6/Label"]
+position = Vector2(27.9999, 16)
+scale = Vector2(52.135, 30.295)
+script = ExtResource("2_ywqpy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HBox_Viste/VBox_Grab/PanelContainer/ScrollContainer/VBoxContainer/line_Spawner6/Label/Area2D"]
+position = Vector2(2.1195, -0.0577641)
+shape = SubResource("RectangleShape2D_eootr")
+
+[node name="line_Spawner" type="PanelContainer" parent="HBox_Viste/VBox_Grab/PanelContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_6njoa")
+
+[node name="Label" type="Label" parent="HBox_Viste/VBox_Grab/PanelContainer/ScrollContainer/VBoxContainer/line_Spawner"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 18
+text = " int i = 0;"
+
+[node name="Area2D" type="Area2D" parent="HBox_Viste/VBox_Grab/PanelContainer/ScrollContainer/VBoxContainer/line_Spawner/Label"]
+position = Vector2(27.9999, 16)
+scale = Vector2(52.135, 30.295)
+script = ExtResource("2_ywqpy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HBox_Viste/VBox_Grab/PanelContainer/ScrollContainer/VBoxContainer/line_Spawner/Label/Area2D"]
+position = Vector2(0.163041, -0.0577642)
+shape = SubResource("RectangleShape2D_i375r")
+
+[node name="line_Spawner2" type="PanelContainer" parent="HBox_Viste/VBox_Grab/PanelContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_6njoa")
+
+[node name="Label" type="Label" parent="HBox_Viste/VBox_Grab/PanelContainer/ScrollContainer/VBoxContainer/line_Spawner2"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 18
+text = " i == n"
+
+[node name="Area2D" type="Area2D" parent="HBox_Viste/VBox_Grab/PanelContainer/ScrollContainer/VBoxContainer/line_Spawner2/Label"]
+position = Vector2(27.9999, 16)
+scale = Vector2(52.135, 30.295)
+script = ExtResource("2_ywqpy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HBox_Viste/VBox_Grab/PanelContainer/ScrollContainer/VBoxContainer/line_Spawner2/Label/Area2D"]
+position = Vector2(-0.0383594, -0.0577645)
+shape = SubResource("RectangleShape2D_ol1hi")
+
+[node name="line_Spawner4" type="PanelContainer" parent="HBox_Viste/VBox_Grab/PanelContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_6njoa")
+
+[node name="Label" type="Label" parent="HBox_Viste/VBox_Grab/PanelContainer/ScrollContainer/VBoxContainer/line_Spawner4"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 18
+text = " i++;"
+
+[node name="Area2D" type="Area2D" parent="HBox_Viste/VBox_Grab/PanelContainer/ScrollContainer/VBoxContainer/line_Spawner4/Label"]
+position = Vector2(27.9999, 16)
+scale = Vector2(52.135, 30.295)
+script = ExtResource("2_ywqpy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HBox_Viste/VBox_Grab/PanelContainer/ScrollContainer/VBoxContainer/line_Spawner4/Label/Area2D"]
+position = Vector2(-0.191807, -0.0577641)
+shape = SubResource("RectangleShape2D_fsoxa")
+
+[node name="line_Spawner5" type="PanelContainer" parent="HBox_Viste/VBox_Grab/PanelContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_6njoa")
+
+[node name="Label" type="Label" parent="HBox_Viste/VBox_Grab/PanelContainer/ScrollContainer/VBoxContainer/line_Spawner5"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 18
+text = " break;"
+
+[node name="Area2D" type="Area2D" parent="HBox_Viste/VBox_Grab/PanelContainer/ScrollContainer/VBoxContainer/line_Spawner5/Label"]
+position = Vector2(27.9999, 16)
+scale = Vector2(52.135, 30.295)
+script = ExtResource("2_ywqpy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HBox_Viste/VBox_Grab/PanelContainer/ScrollContainer/VBoxContainer/line_Spawner5/Label/Area2D"]
+position = Vector2(0.0383644, -0.0577641)
+shape = SubResource("RectangleShape2D_atbpf")
+
+[node name="VBox_Code" type="VBoxContainer" parent="HBox_Viste"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 2.5
+
+[node name="PanelContainer" type="PanelContainer" parent="HBox_Viste/VBox_Code"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_0esto")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="HBox_Viste/VBox_Code/PanelContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBox_RowContainer" type="VBoxContainer" parent="HBox_Viste/VBox_Code/PanelContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="row 2_1" type="PanelContainer" parent="HBox_Viste/VBox_Code/PanelContainer/ScrollContainer/VBox_RowContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_e50wi")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBox_Viste/VBox_Code/PanelContainer/ScrollContainer/VBox_RowContainer/row 2_1"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="Label" type="Label" parent="HBox_Viste/VBox_Code/PanelContainer/ScrollContainer/VBox_RowContainer/row 2_1/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+label_settings = ExtResource("5_qx8da")
+
+[node name="row 3" type="PanelContainer" parent="HBox_Viste/VBox_Code/PanelContainer/ScrollContainer/VBox_RowContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_o61ne")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBox_Viste/VBox_Code/PanelContainer/ScrollContainer/VBox_RowContainer/row 3"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="Label2" type="Label" parent="HBox_Viste/VBox_Code/PanelContainer/ScrollContainer/VBox_RowContainer/row 3/HBoxContainer"]
+layout_mode = 2
+text = "public void"
+label_settings = ExtResource("3_aeftf")
+
+[node name="Label3" type="Label" parent="HBox_Viste/VBox_Code/PanelContainer/ScrollContainer/VBox_RowContainer/row 3/HBoxContainer"]
+layout_mode = 2
+text = "Conta"
+label_settings = ExtResource("6_3g1p2")
+
+[node name="Label4" type="Label" parent="HBox_Viste/VBox_Code/PanelContainer/ScrollContainer/VBox_RowContainer/row 3/HBoxContainer"]
+layout_mode = 2
+text = "("
+label_settings = ExtResource("7_v1gm4")
+
+[node name="Label" type="Label" parent="HBox_Viste/VBox_Code/PanelContainer/ScrollContainer/VBox_RowContainer/row 3/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+text = "int "
+label_settings = ExtResource("3_aeftf")
+
+[node name="Label5" type="Label" parent="HBox_Viste/VBox_Code/PanelContainer/ScrollContainer/VBox_RowContainer/row 3/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+text = "n"
+label_settings = ExtResource("4_jlorq")
+
+[node name="Label6" type="Label" parent="HBox_Viste/VBox_Code/PanelContainer/ScrollContainer/VBox_RowContainer/row 3/HBoxContainer"]
+layout_mode = 2
+text = ")                                 "
+label_settings = ExtResource("7_v1gm4")
+
+[node name="row 4" type="PanelContainer" parent="HBox_Viste/VBox_Code/PanelContainer/ScrollContainer/VBox_RowContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_y1db2")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBox_Viste/VBox_Code/PanelContainer/ScrollContainer/VBox_RowContainer/row 4"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="Label" type="Label" parent="HBox_Viste/VBox_Code/PanelContainer/ScrollContainer/VBox_RowContainer/row 4/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+text = "{"
+label_settings = ExtResource("4_jlorq")
+
+[node name="row 5" type="PanelContainer" parent="HBox_Viste/VBox_Code/PanelContainer/ScrollContainer/VBox_RowContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_uaffd")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBox_Viste/VBox_Code/PanelContainer/ScrollContainer/VBox_RowContainer/row 5"]
+layout_mode = 2
+
+[node name="Tab" parent="HBox_Viste/VBox_Code/PanelContainer/ScrollContainer/VBox_RowContainer/row 5/HBoxContainer" instance=ExtResource("8_c0e0r")]
+layout_mode = 2
+
+[node name="InteractiveBox" parent="HBox_Viste/VBox_Code/PanelContainer/ScrollContainer/VBox_RowContainer/row 5/HBoxContainer" instance=ExtResource("9_4qpsl")]
+layout_mode = 2
+
+[node name="row 7" type="PanelContainer" parent="HBox_Viste/VBox_Code/PanelContainer/ScrollContainer/VBox_RowContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_uaffd")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBox_Viste/VBox_Code/PanelContainer/ScrollContainer/VBox_RowContainer/row 7"]
+layout_mode = 2
+
+[node name="Tab" parent="HBox_Viste/VBox_Code/PanelContainer/ScrollContainer/VBox_RowContainer/row 7/HBoxContainer" instance=ExtResource("8_c0e0r")]
+layout_mode = 2
+
+[node name="While_Static" type="VBoxContainer" parent="HBox_Viste/VBox_Code/PanelContainer/ScrollContainer/VBox_RowContainer/row 7/HBoxContainer"]
+layout_mode = 2
+
+[node name="While_Definition" type="HBoxContainer" parent="HBox_Viste/VBox_Code/PanelContainer/ScrollContainer/VBox_RowContainer/row 7/HBoxContainer/While_Static"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="InteractiveBox4" type="PanelContainer" parent="HBox_Viste/VBox_Code/PanelContainer/ScrollContainer/VBox_RowContainer/row 7/HBoxContainer/While_Static/While_Definition"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_8ra5p")
+
+[node name="TextBox" type="Label" parent="HBox_Viste/VBox_Code/PanelContainer/ScrollContainer/VBox_RowContainer/row 7/HBoxContainer/While_Static/While_Definition/InteractiveBox4"]
+layout_mode = 2
+text = " while "
+label_settings = ExtResource("7_v1gm4")
+
+[node name="Area2D" type="Area2D" parent="HBox_Viste/VBox_Code/PanelContainer/ScrollContainer/VBox_RowContainer/row 7/HBoxContainer/While_Static/While_Definition/InteractiveBox4/TextBox"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HBox_Viste/VBox_Code/PanelContainer/ScrollContainer/VBox_RowContainer/row 7/HBoxContainer/While_Static/While_Definition/InteractiveBox4/TextBox/Area2D"]
+position = Vector2(28, 15)
+shape = SubResource("RectangleShape2D_3v22s")
+
+[node name="Label2" type="Label" parent="HBox_Viste/VBox_Code/PanelContainer/ScrollContainer/VBox_RowContainer/row 7/HBoxContainer/While_Static/While_Definition"]
+layout_mode = 2
+size_flags_vertical = 0
+text = "("
+label_settings = ExtResource("4_jlorq")
+
+[node name="InteractiveBox" parent="HBox_Viste/VBox_Code/PanelContainer/ScrollContainer/VBox_RowContainer/row 7/HBoxContainer/While_Static/While_Definition" instance=ExtResource("9_4qpsl")]
+layout_mode = 2
+
+[node name="Label3" type="Label" parent="HBox_Viste/VBox_Code/PanelContainer/ScrollContainer/VBox_RowContainer/row 7/HBoxContainer/While_Static/While_Definition"]
+layout_mode = 2
+size_flags_vertical = 0
+text = ")"
+label_settings = ExtResource("4_jlorq")
+
+[node name="Label4" type="Label" parent="HBox_Viste/VBox_Code/PanelContainer/ScrollContainer/VBox_RowContainer/row 7/HBoxContainer/While_Static/While_Definition"]
+layout_mode = 2
+size_flags_vertical = 0
+text = "           "
+label_settings = ExtResource("7_v1gm4")
+
+[node name="Button_Remove" parent="HBox_Viste/VBox_Code/PanelContainer/ScrollContainer/VBox_RowContainer/row 7/HBoxContainer/While_Static/While_Definition" instance=ExtResource("10_n0v75")]
+visible = false
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_x2lhf")
+theme_override_styles/hover = SubResource("StyleBoxFlat_faqce")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ihawj")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_j0maj")
+text = " - "
+
+[node name="While_Open" type="Label" parent="HBox_Viste/VBox_Code/PanelContainer/ScrollContainer/VBox_RowContainer/row 7/HBoxContainer/While_Static"]
+layout_mode = 2
+size_flags_vertical = 0
+text = "     {"
+label_settings = ExtResource("7_v1gm4")
+
+[node name="While_Block" type="VBoxContainer" parent="HBox_Viste/VBox_Code/PanelContainer/ScrollContainer/VBox_RowContainer/row 7/HBoxContainer/While_Static"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="Row1" type="HBoxContainer" parent="HBox_Viste/VBox_Code/PanelContainer/ScrollContainer/VBox_RowContainer/row 7/HBoxContainer/While_Static/While_Block"]
+layout_mode = 2
+
+[node name="Tab" type="Label" parent="HBox_Viste/VBox_Code/PanelContainer/ScrollContainer/VBox_RowContainer/row 7/HBoxContainer/While_Static/While_Block/Row1"]
+layout_mode = 2
+size_flags_vertical = 0
+text = "             "
+label_settings = ExtResource("7_v1gm4")
+
+[node name="InteractiveBox" parent="HBox_Viste/VBox_Code/PanelContainer/ScrollContainer/VBox_RowContainer/row 7/HBoxContainer/While_Static/While_Block/Row1" instance=ExtResource("9_4qpsl")]
+layout_mode = 2
+
+[node name="Row2" type="HBoxContainer" parent="HBox_Viste/VBox_Code/PanelContainer/ScrollContainer/VBox_RowContainer/row 7/HBoxContainer/While_Static/While_Block"]
+layout_mode = 2
+
+[node name="Tab" type="Label" parent="HBox_Viste/VBox_Code/PanelContainer/ScrollContainer/VBox_RowContainer/row 7/HBoxContainer/While_Static/While_Block/Row2"]
+layout_mode = 2
+size_flags_vertical = 0
+text = "             "
+label_settings = ExtResource("7_v1gm4")
+
+[node name="InteractiveBox" parent="HBox_Viste/VBox_Code/PanelContainer/ScrollContainer/VBox_RowContainer/row 7/HBoxContainer/While_Static/While_Block/Row2" instance=ExtResource("9_4qpsl")]
+layout_mode = 2
+
+[node name="While_Close" type="Label" parent="HBox_Viste/VBox_Code/PanelContainer/ScrollContainer/VBox_RowContainer/row 7/HBoxContainer/While_Static"]
+layout_mode = 2
+size_flags_vertical = 0
+text = "     }"
+label_settings = ExtResource("7_v1gm4")
+
+[node name="row 6" type="PanelContainer" parent="HBox_Viste/VBox_Code/PanelContainer/ScrollContainer/VBox_RowContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_ocdk7")
+
+[node name="Label" type="Label" parent="HBox_Viste/VBox_Code/PanelContainer/ScrollContainer/VBox_RowContainer/row 6"]
+layout_mode = 2
+size_flags_vertical = 0
+text = "}"
+label_settings = ExtResource("4_jlorq")
+
+[node name="VBox_Instruction" type="VBoxContainer" parent="HBox_Viste"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ScrollContainer" type="ScrollContainer" parent="HBox_Viste/VBox_Instruction"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBox_Viste/VBox_Instruction/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Panel_Instruction" type="PanelContainer" parent="HBox_Viste/VBox_Instruction/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_bx7sx")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBox_Viste/VBox_Instruction/ScrollContainer/VBoxContainer/Panel_Instruction"]
+layout_mode = 2
+
+[node name="InstructionTexture" parent="HBox_Viste/VBox_Instruction/ScrollContainer/VBoxContainer/Panel_Instruction/VBoxContainer" instance=ExtResource("13_7fleq")]
+layout_mode = 2
+
+[node name="Instruction" type="Label" parent="HBox_Viste/VBox_Instruction/ScrollContainer/VBoxContainer/Panel_Instruction/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Devi utilizzare il while per replicare un for. 
+La variabile \"i\" deve essere dichiarata e incrementata tante volte fino ad assumere lo stesso valore di \"n\".
+Una volta fatto questo il while deve arrestarsi e bbisogna scrivere nella console il valore attuale di \"i\".
+Ricorda che l'istruzione \"break\" permette di interrompere forzatatamente il ciclo in qualsiasi momento."
+horizontal_alignment = 1
+autowrap_mode = 2
+clip_text = true
+
+[node name="HBox_OutputBox" type="HBoxContainer" parent="."]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.1
+
+[node name="VBox_Button" type="VBoxContainer" parent="HBox_OutputBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+size_flags_stretch_ratio = 0.1
+
+[node name="CheckButton" type="Button" parent="HBox_OutputBox/VBox_Button"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 6
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_0gxb7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_cbpl8")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_n12on")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_55cev")
+text = " Check "
+
+[node name="NextButton" type="Button" parent="HBox_OutputBox/VBox_Button"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_0gxb7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_cbpl8")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_n12on")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_55cev")
+disabled = true
+text = " Next"
+
+[node name="Panel_Output" type="PanelContainer" parent="HBox_OutputBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_bx7sx")
+
+[node name="OutputLabel" type="Label" parent="HBox_OutputBox/Panel_Output"]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "
+
+"
+vertical_alignment = 1
+autowrap_mode = 2
+clip_text = true
+
+[connection signal="pressed" from="HBox_OutputBox/VBox_Button/CheckButton" to="." method="CheckAction"]

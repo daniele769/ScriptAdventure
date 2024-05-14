@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dpp8o0n3m2wbs"]
+
+[ext_resource type="LabelSettings" uid="uid://wfyakha2ykdg" path="res://new_label_settings.tres" id="1_worm6"]
+
+[node name="Tab" type="Label"]
+size_flags_vertical = 0
+text = "    "
+label_settings = ExtResource("1_worm6")

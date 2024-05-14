@@ -1,0 +1,213 @@
+[gd_scene load_steps=8 format=3 uid="uid://cfttijf4ot2bi"]
+
+[ext_resource type="Script" path="res://Script/UI/Option/KeybindingControl.cs" id="1_f6a3g"]
+[ext_resource type="LabelSettings" uid="uid://wfyakha2ykdg" path="res://new_label_settings.tres" id="2_n3hgs"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r2lys"]
+bg_color = Color(0.105882, 0.0941176, 0.0823529, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b6vvv"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0vshg"]
+bg_color = Color(0.741176, 0.741176, 0.741176, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ljtu6"]
+bg_color = Color(0.345098, 0.345098, 0.345098, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gg6c4"]
+
+[node name="Keybinding" type="CanvasLayer" node_paths=PackedStringArray("backToMenuButton")]
+script = ExtResource("1_f6a3g")
+backToMenuButton = NodePath("PanelContainer/VBoxContainer/Button_BackToMenu")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_r2lys")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer"]
+layout_mode = 2
+
+[node name="Button_BackToMenu" type="Button" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 18
+theme_override_styles/normal = SubResource("StyleBoxFlat_b6vvv")
+theme_override_styles/hover = SubResource("StyleBoxFlat_0vshg")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ljtu6")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_gg6c4")
+text = " Torna al Menu "
+
+[node name="GridContainer" type="GridContainer" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+size_flags_stretch_ratio = 0.4
+columns = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+
+[node name="Raw1" type="HBoxContainer" parent="PanelContainer/VBoxContainer/GridContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer/GridContainer/VBoxContainer/Raw1"]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "Movimento Sopra"
+label_settings = ExtResource("2_n3hgs")
+horizontal_alignment = 2
+
+[node name="Raw2" type="HBoxContainer" parent="PanelContainer/VBoxContainer/GridContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer/GridContainer/VBoxContainer/Raw2"]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "Movimento  Sotto"
+label_settings = ExtResource("2_n3hgs")
+horizontal_alignment = 2
+
+[node name="Raw3" type="HBoxContainer" parent="PanelContainer/VBoxContainer/GridContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer/GridContainer/VBoxContainer/Raw3"]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "Movimento Destra"
+label_settings = ExtResource("2_n3hgs")
+horizontal_alignment = 2
+
+[node name="Raw4" type="HBoxContainer" parent="PanelContainer/VBoxContainer/GridContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer/GridContainer/VBoxContainer/Raw4"]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "Movimento Sinistra"
+label_settings = ExtResource("2_n3hgs")
+horizontal_alignment = 2
+
+[node name="Raw5" type="HBoxContainer" parent="PanelContainer/VBoxContainer/GridContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer/GridContainer/VBoxContainer/Raw5"]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "Interagisci"
+label_settings = ExtResource("2_n3hgs")
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Raw6" type="HBoxContainer" parent="PanelContainer/VBoxContainer/GridContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer/GridContainer/VBoxContainer/Raw6"]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "Apri Console"
+label_settings = ExtResource("2_n3hgs")
+horizontal_alignment = 2
+vertical_alignment = 2
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="PanelContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+
+[node name="Raw1" type="HBoxContainer" parent="PanelContainer/VBoxContainer/GridContainer/VBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer/GridContainer/VBoxContainer2/Raw1"]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "             W"
+label_settings = ExtResource("2_n3hgs")
+horizontal_alignment = 2
+
+[node name="Raw2" type="HBoxContainer" parent="PanelContainer/VBoxContainer/GridContainer/VBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer/GridContainer/VBoxContainer2/Raw2"]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "             S"
+label_settings = ExtResource("2_n3hgs")
+horizontal_alignment = 2
+
+[node name="Raw3" type="HBoxContainer" parent="PanelContainer/VBoxContainer/GridContainer/VBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer/GridContainer/VBoxContainer2/Raw3"]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "             D"
+label_settings = ExtResource("2_n3hgs")
+horizontal_alignment = 2
+
+[node name="Raw4" type="HBoxContainer" parent="PanelContainer/VBoxContainer/GridContainer/VBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer/GridContainer/VBoxContainer2/Raw4"]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "             A"
+label_settings = ExtResource("2_n3hgs")
+horizontal_alignment = 2
+
+[node name="Raw5" type="HBoxContainer" parent="PanelContainer/VBoxContainer/GridContainer/VBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer/GridContainer/VBoxContainer2/Raw5"]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "             INVIO"
+label_settings = ExtResource("2_n3hgs")
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Raw6" type="HBoxContainer" parent="PanelContainer/VBoxContainer/GridContainer/VBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer/GridContainer/VBoxContainer2/Raw6"]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "             \\"
+label_settings = ExtResource("2_n3hgs")
+horizontal_alignment = 2
+vertical_alignment = 2

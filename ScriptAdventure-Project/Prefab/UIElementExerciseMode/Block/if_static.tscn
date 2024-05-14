@@ -1,0 +1,129 @@
+[gd_scene load_steps=11 format=3 uid="uid://dlubvefnmqltn"]
+
+[ext_resource type="LabelSettings" uid="uid://7k2v7xbt08ec" path="res://CommandLabelSetting.tres" id="2_e5r30"]
+[ext_resource type="LabelSettings" uid="uid://wfyakha2ykdg" path="res://new_label_settings.tres" id="4_kgqad"]
+[ext_resource type="PackedScene" uid="uid://bs4umh4awq33g" path="res://Prefab/UIElementExerciseMode/InteractiveBox.tscn" id="5_2ksgs"]
+[ext_resource type="PackedScene" uid="uid://b7v11eyypvkxi" path="res://Prefab/button_WhiteRounded.tscn" id="6_1u2my"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8ra5p"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fbt17"]
+size = Vector2(21, 30)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x2lhf"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_faqce"]
+bg_color = Color(0.741176, 0.741176, 0.741176, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ihawj"]
+bg_color = Color(0.345098, 0.345098, 0.345098, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_j0maj"]
+
+[node name="If_Static" type="VBoxContainer"]
+
+[node name="If_Definition" type="HBoxContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="Label" type="Label" parent="If_Definition"]
+visible = false
+layout_mode = 2
+size_flags_vertical = 0
+text = "     if "
+label_settings = ExtResource("2_e5r30")
+
+[node name="InteractiveBox4" type="PanelContainer" parent="If_Definition"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_8ra5p")
+
+[node name="TextBox" type="Label" parent="If_Definition/InteractiveBox4"]
+layout_mode = 2
+text = " if "
+label_settings = ExtResource("2_e5r30")
+
+[node name="Area2D" type="Area2D" parent="If_Definition/InteractiveBox4/TextBox"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="If_Definition/InteractiveBox4/TextBox/Area2D"]
+position = Vector2(10.5, 15)
+shape = SubResource("RectangleShape2D_fbt17")
+
+[node name="Label2" type="Label" parent="If_Definition"]
+layout_mode = 2
+size_flags_vertical = 0
+text = "("
+label_settings = ExtResource("4_kgqad")
+
+[node name="InteractiveBox" parent="If_Definition" instance=ExtResource("5_2ksgs")]
+layout_mode = 2
+
+[node name="Label3" type="Label" parent="If_Definition"]
+layout_mode = 2
+size_flags_vertical = 0
+text = ")"
+label_settings = ExtResource("4_kgqad")
+
+[node name="Label4" type="Label" parent="If_Definition"]
+layout_mode = 2
+size_flags_vertical = 0
+text = "           "
+label_settings = ExtResource("2_e5r30")
+
+[node name="Button_Remove" parent="If_Definition" instance=ExtResource("6_1u2my")]
+visible = false
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_x2lhf")
+theme_override_styles/hover = SubResource("StyleBoxFlat_faqce")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ihawj")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_j0maj")
+text = " - "
+
+[node name="If_Open" type="Label" parent="."]
+layout_mode = 2
+size_flags_vertical = 0
+text = "     {"
+label_settings = ExtResource("2_e5r30")
+
+[node name="If_Block" type="VBoxContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="Row1" type="HBoxContainer" parent="If_Block"]
+layout_mode = 2
+
+[node name="Tab" type="Label" parent="If_Block/Row1"]
+layout_mode = 2
+size_flags_vertical = 0
+text = "             "
+label_settings = ExtResource("2_e5r30")
+
+[node name="InteractiveBox" parent="If_Block/Row1" instance=ExtResource("5_2ksgs")]
+layout_mode = 2
+
+[node name="If_Close" type="Label" parent="."]
+layout_mode = 2
+size_flags_vertical = 0
+text = "     }"
+label_settings = ExtResource("2_e5r30")

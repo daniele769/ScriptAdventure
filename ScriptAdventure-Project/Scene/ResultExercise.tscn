@@ -1,0 +1,255 @@
+[gd_scene load_steps=12 format=3 uid="uid://bgvkfs25m3bhu"]
+
+[ext_resource type="Script" path="res://Script/ResultExerciseControl.cs" id="1_s7kxp"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_awbeb"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t57hp"]
+bg_color = Color(0.105882, 0.0941176, 0.0823529, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_accka"]
+font_size = 23
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c8l32"]
+bg_color = Color(0.878431, 0.878431, 0.878431, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_8obfr"]
+font_size = 20
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_1pkwk"]
+font_size = 33
+font_color = Color(0.639216, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ax75u"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tojuj"]
+bg_color = Color(0.741176, 0.741176, 0.741176, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v68y7"]
+bg_color = Color(0.345098, 0.345098, 0.345098, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5ud5r"]
+
+[node name="ResultExercise" type="Control" node_paths=PackedStringArray("subjectRowProxy", "errorRowProxy", "timeRowProxy", "totalErrorRow", "totalTimeRow", "backToMenuButton")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_s7kxp")
+subjectRowProxy = NodePath("ControllerContainer/VBoxContainer/ScrollContainer/VBoxContainer/GridContainer/VBox_Subject/Row0")
+errorRowProxy = NodePath("ControllerContainer/VBoxContainer/ScrollContainer/VBoxContainer/GridContainer/VBox_Error/Row0")
+timeRowProxy = NodePath("ControllerContainer/VBoxContainer/ScrollContainer/VBoxContainer/GridContainer/VBox_Time/Row0")
+totalErrorRow = NodePath("ControllerContainer/VBoxContainer/ScrollContainer/VBoxContainer/GridContainer2/VBox_TotalError/TotalError")
+totalTimeRow = NodePath("ControllerContainer/VBoxContainer/ScrollContainer/VBoxContainer/GridContainer2/VBox_TotalTime/TotalTime")
+backToMenuButton = NodePath("ControllerContainer/VBoxContainer/Button_BackToMenu")
+
+[node name="ControllerContainer" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_awbeb")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ControllerContainer"]
+layout_mode = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="ControllerContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ControllerContainer/VBoxContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="GridContainer" type="GridContainer" parent="ControllerContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+columns = 3
+
+[node name="VBox_Subject" type="VBoxContainer" parent="ControllerContainer/VBoxContainer/ScrollContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="SubjectPanel" type="PanelContainer" parent="ControllerContainer/VBoxContainer/ScrollContainer/VBoxContainer/GridContainer/VBox_Subject"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_t57hp")
+
+[node name="Label" type="Label" parent="ControllerContainer/VBoxContainer/ScrollContainer/VBoxContainer/GridContainer/VBox_Subject/SubjectPanel"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = " Categoria "
+label_settings = SubResource("LabelSettings_accka")
+
+[node name="Row0" type="PanelContainer" parent="ControllerContainer/VBoxContainer/ScrollContainer/VBoxContainer/GridContainer/VBox_Subject"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_c8l32")
+
+[node name="Label" type="Label" parent="ControllerContainer/VBoxContainer/ScrollContainer/VBoxContainer/GridContainer/VBox_Subject/Row0"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = " proxy"
+label_settings = SubResource("LabelSettings_8obfr")
+
+[node name="VBox_Error" type="VBoxContainer" parent="ControllerContainer/VBoxContainer/ScrollContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ErrorPanel" type="PanelContainer" parent="ControllerContainer/VBoxContainer/ScrollContainer/VBoxContainer/GridContainer/VBox_Error"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_t57hp")
+
+[node name="Label" type="Label" parent="ControllerContainer/VBoxContainer/ScrollContainer/VBoxContainer/GridContainer/VBox_Error/ErrorPanel"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Errori"
+label_settings = SubResource("LabelSettings_accka")
+
+[node name="Row0" type="PanelContainer" parent="ControllerContainer/VBoxContainer/ScrollContainer/VBoxContainer/GridContainer/VBox_Error"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_c8l32")
+
+[node name="Label" type="Label" parent="ControllerContainer/VBoxContainer/ScrollContainer/VBoxContainer/GridContainer/VBox_Error/Row0"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = " proxy"
+label_settings = SubResource("LabelSettings_8obfr")
+
+[node name="VBox_Time" type="VBoxContainer" parent="ControllerContainer/VBoxContainer/ScrollContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TimePanel" type="PanelContainer" parent="ControllerContainer/VBoxContainer/ScrollContainer/VBoxContainer/GridContainer/VBox_Time"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_t57hp")
+
+[node name="Label" type="Label" parent="ControllerContainer/VBoxContainer/ScrollContainer/VBoxContainer/GridContainer/VBox_Time/TimePanel"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Tempo"
+label_settings = SubResource("LabelSettings_accka")
+
+[node name="Row0" type="PanelContainer" parent="ControllerContainer/VBoxContainer/ScrollContainer/VBoxContainer/GridContainer/VBox_Time"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_c8l32")
+
+[node name="Label" type="Label" parent="ControllerContainer/VBoxContainer/ScrollContainer/VBoxContainer/GridContainer/VBox_Time/Row0"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = " proxy"
+label_settings = SubResource("LabelSettings_8obfr")
+
+[node name="GridContainer2" type="GridContainer" parent="ControllerContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 2
+columns = 3
+
+[node name="VBox_Total" type="VBoxContainer" parent="ControllerContainer/VBoxContainer/ScrollContainer/VBoxContainer/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="ControllerContainer/VBoxContainer/ScrollContainer/VBoxContainer/GridContainer2/VBox_Total"]
+layout_mode = 2
+size_flags_horizontal = 4
+label_settings = SubResource("LabelSettings_accka")
+
+[node name="Row0" type="PanelContainer" parent="ControllerContainer/VBoxContainer/ScrollContainer/VBoxContainer/GridContainer2/VBox_Total"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_c8l32")
+
+[node name="Label" type="Label" parent="ControllerContainer/VBoxContainer/ScrollContainer/VBoxContainer/GridContainer2/VBox_Total/Row0"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Totale"
+label_settings = SubResource("LabelSettings_1pkwk")
+
+[node name="VBox_TotalError" type="VBoxContainer" parent="ControllerContainer/VBoxContainer/ScrollContainer/VBoxContainer/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="ControllerContainer/VBoxContainer/ScrollContainer/VBoxContainer/GridContainer2/VBox_TotalError"]
+layout_mode = 2
+size_flags_horizontal = 4
+label_settings = SubResource("LabelSettings_accka")
+
+[node name="TotalError" type="PanelContainer" parent="ControllerContainer/VBoxContainer/ScrollContainer/VBoxContainer/GridContainer2/VBox_TotalError"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_c8l32")
+
+[node name="Label" type="Label" parent="ControllerContainer/VBoxContainer/ScrollContainer/VBoxContainer/GridContainer2/VBox_TotalError/TotalError"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = " proxy"
+label_settings = SubResource("LabelSettings_8obfr")
+
+[node name="VBox_TotalTime" type="VBoxContainer" parent="ControllerContainer/VBoxContainer/ScrollContainer/VBoxContainer/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="ControllerContainer/VBoxContainer/ScrollContainer/VBoxContainer/GridContainer2/VBox_TotalTime"]
+layout_mode = 2
+size_flags_horizontal = 4
+label_settings = SubResource("LabelSettings_accka")
+
+[node name="TotalTime" type="PanelContainer" parent="ControllerContainer/VBoxContainer/ScrollContainer/VBoxContainer/GridContainer2/VBox_TotalTime"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_c8l32")
+
+[node name="Label" type="Label" parent="ControllerContainer/VBoxContainer/ScrollContainer/VBoxContainer/GridContainer2/VBox_TotalTime/TotalTime"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = " proxy"
+label_settings = SubResource("LabelSettings_8obfr")
+
+[node name="Button_BackToMenu" type="Button" parent="ControllerContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_ax75u")
+theme_override_styles/hover = SubResource("StyleBoxFlat_tojuj")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_v68y7")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_5ud5r")
+text = " Torna al Menu "

@@ -1,0 +1,217 @@
+[gd_scene load_steps=13 format=3 uid="uid://crvpid44ugkoc"]
+
+[ext_resource type="Script" path="res://Script/UI/Option/MenuControl.cs" id="1_nia0f"]
+[ext_resource type="PackedScene" uid="uid://pad8fmt5c272" path="res://Scene/ModalitàEsercizio.tscn" id="2_43kcc"]
+[ext_resource type="PackedScene" uid="uid://c86k4gk36lc5i" path="res://Scene/Level0.tscn" id="3_7th33"]
+[ext_resource type="PackedScene" uid="uid://bhpkvxd65sccb" path="res://Scene/Option.tscn" id="4_houif"]
+[ext_resource type="PackedScene" uid="uid://bsw3s3wfqrylj" path="res://Scene/SelectLevel.tscn" id="4_tle87"]
+[ext_resource type="PackedScene" uid="uid://cfttijf4ot2bi" path="res://Scene/Keybinding.tscn" id="6_6hxy6"]
+[ext_resource type="PackedScene" uid="uid://djgbsk7xm3rfo" path="res://Scene/Credit.tscn" id="7_mm08j"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_udwlv"]
+bg_color = Color(0.105882, 0.0941176, 0.0823529, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dq4i3"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ld43r"]
+bg_color = Color(0.741176, 0.741176, 0.741176, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j6mu8"]
+bg_color = Color(0.345098, 0.345098, 0.345098, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_m3pcc"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Menu" type="CanvasLayer" parent="." node_paths=PackedStringArray("newGameButton", "selectLevelButton", "loadSaveButton", "exerciseModeButton", "optionButton", "keybindingButton", "backToTitleButton", "creditButton", "closeButton", "exitButton")]
+script = ExtResource("1_nia0f")
+newGameButton = NodePath("PanelContainer/VBoxContainer/Button_NewGame")
+selectLevelButton = NodePath("PanelContainer/VBoxContainer/Button_SelectLevel")
+loadSaveButton = NodePath("PanelContainer/VBoxContainer/Button_SelectLevel")
+exerciseModeButton = NodePath("PanelContainer/VBoxContainer/Button_ExerciseMode")
+optionButton = NodePath("PanelContainer/VBoxContainer/Button_Option")
+keybindingButton = NodePath("PanelContainer/VBoxContainer/Button_Keybinding")
+backToTitleButton = NodePath("PanelContainer/VBoxContainer/Button_BackToTitle")
+creditButton = NodePath("PanelContainer/VBoxContainer/Button_Credit")
+closeButton = NodePath("PanelContainer/VBoxContainer/Button_Close")
+exitButton = NodePath("PanelContainer/VBoxContainer/Button_Exit")
+exerciseModeScene = ExtResource("2_43kcc")
+newGameScene = ExtResource("3_7th33")
+selectLevelScene = ExtResource("4_tle87")
+optionScene = ExtResource("4_houif")
+keybindingScene = ExtResource("6_6hxy6")
+creditScene = ExtResource("7_mm08j")
+
+[node name="PanelContainer" type="PanelContainer" parent="Menu"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_udwlv")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Menu/PanelContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Button_Close" type="Button" parent="Menu/PanelContainer/VBoxContainer"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_dq4i3")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ld43r")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_j6mu8")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_m3pcc")
+text = " Torna al gioco "
+
+[node name="Button_NewGame" type="Button" parent="Menu/PanelContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_dq4i3")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ld43r")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_j6mu8")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_m3pcc")
+text = " Nuovo Gioco "
+
+[node name="Button_SelectLevel" type="Button" parent="Menu/PanelContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_dq4i3")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ld43r")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_j6mu8")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_m3pcc")
+text = " Seleziona livello "
+
+[node name="Button_ExerciseMode" type="Button" parent="Menu/PanelContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_dq4i3")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ld43r")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_j6mu8")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_m3pcc")
+text = " Modalità esercizio "
+
+[node name="Button_Option" type="Button" parent="Menu/PanelContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_dq4i3")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ld43r")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_j6mu8")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_m3pcc")
+text = " Opzioni "
+
+[node name="Button_Keybinding" type="Button" parent="Menu/PanelContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_dq4i3")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ld43r")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_j6mu8")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_m3pcc")
+text = " Controlli "
+
+[node name="Button_BackToTitle" type="Button" parent="Menu/PanelContainer/VBoxContainer"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_dq4i3")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ld43r")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_j6mu8")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_m3pcc")
+text = " Torna al menu iniziale "
+
+[node name="Button_Credit" type="Button" parent="Menu/PanelContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_dq4i3")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ld43r")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_j6mu8")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_m3pcc")
+text = " Crediti "
+
+[node name="Button_Exit" type="Button" parent="Menu/PanelContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_dq4i3")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ld43r")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_j6mu8")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_m3pcc")
+text = " Esci dal gioco "

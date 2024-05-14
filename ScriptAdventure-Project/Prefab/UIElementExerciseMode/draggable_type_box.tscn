@@ -1,0 +1,42 @@
+[gd_scene load_steps=5 format=3 uid="uid://cus74muwf5fep"]
+
+[ext_resource type="LabelSettings" uid="uid://wfyakha2ykdg" path="res://new_label_settings.tres" id="1_tw827"]
+[ext_resource type="Script" path="res://Script/UI/DraggableUI.cs" id="2_h37wl"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oddr4"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tbdf3"]
+size = Vector2(0.767238, 0.52814)
+
+[node name="Draggable-TypeBox" type="PanelContainer"]
+offset_left = 600.0
+offset_top = 192.0
+offset_right = 667.0
+offset_bottom = 223.0
+size_flags_horizontal = 8
+size_flags_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_oddr4")
+
+[node name="Label" type="Label" parent="."]
+self_modulate = Color(0, 0, 0, 1)
+layout_mode = 2
+text = " string "
+label_settings = ExtResource("1_tw827")
+
+[node name="Area2D" type="Area2D" parent="Label"]
+position = Vector2(-277, -40.5)
+scale = Vector2(52.135, 30.295)
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("2_h37wl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Label/Area2D"]
+position = Vector2(6.00364, 1.86499)
+shape = SubResource("RectangleShape2D_tbdf3")
+
+[connection signal="area_entered" from="Label/Area2D" to="Label/Area2D" method="OnArea2DEntered"]
