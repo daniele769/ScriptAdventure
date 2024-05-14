@@ -1,3 +1,4 @@
+# ScriptAdventure
 ## Descrizione
 
 Questo progetto è stato realizzato come progetto di laurea triennale in Scienze e Tecnologie Informatiche presso l'Università degli Studi della Basilicata. L'obbiettivo era quello di creare un videogioco OpenSource che 
@@ -39,12 +40,10 @@ Attualmente questo progetto è sicuramente ancora incompleto e potrebbe essere m
 All'interno del progetto io(Venafro Daniele) mi sono occupato direttamente di tutto ciò che riguardasse elementi grafici, la programmazione in generale e il design/progettazione delle varie meccaniche di gioco, 
 il tutto sotto la supervisione del Professore Michele Santomauro dell'Università degli Studi della Basilicata.
 
-All'interno del progetto sono stati usati 2 addon esterni:
-  1) More Effective Godot Coroutines (C#):
-     https://github.com/WeaverDev/More-Effective-Godot-Coroutines?tab=readme-ov-file                      Copyright (c) 2023 Teal Rogers, Isar Arason (WeaverDev)
-  2) PlayerPrefsUtility (C#):
-     https://github.com/DrOffensive/PlayerPrefsUtility?tab=readme-ov-file                                 Copyright (c) 2023 MarcWerk
-     
-Per l'implementazione del BrokerMQtt è stata utilizzata la libreria:
-  hivemq-mqtt-client-dotnet:                
-  https://github.com/hivemq/hivemq-mqtt-client-dotnet?tab=Apache-2.0-1-ov-file                            Copyright 2022 HiveMQ GmbH   
+Di seguito gli Addon/Librerie esterne utilizzate nel progetto.
+  1) More Effective Godot Coroutines (C#): https://github.com/WeaverDev/More-Effective-Godot-Coroutines?tab=readme-ov-file 
+     - Copyright (c) 2023 Teal Rogers, Isar Arason (WeaverDev)
+  2) PlayerPrefsUtility (C#): https://github.com/DrOffensive/PlayerPrefsUtility?tab=readme-ov-file
+     - Copyright (c) 2023 MarcWerk
+  3) hivemq-mqtt-client-dotnet: https://github.com/hivemq/hivemq-mqtt-client-dotnet?tab=Apache-2.0-1-ov-file              
+     - Copyright 2022 HiveMQ GmbH   
