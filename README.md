@@ -55,4 +55,8 @@ Di seguito gli Addon/Librerie esterne utilizzate nel progetto.
   2) PlayerPrefsUtility (C#): https://github.com/DrOffensive/PlayerPrefsUtility?tab=readme-ov-file
      - Copyright (c) 2023 MarcWerk
   3) hivemq-mqtt-client-dotnet: https://github.com/hivemq/hivemq-mqtt-client-dotnet?tab=Apache-2.0-1-ov-file              
-     - Copyright 2022 HiveMQ GmbH   
+     - Copyright 2022 HiveMQ GmbH
+
+## Licenza
+Questo progetto è stato distribuito con licenza Apache-2.0 license. 
+- Copyright 2024 Daniele Venafro [Licenza](https://github.com/daniele769/ScriptAdventure#Apache-2.0-1-ov-file)
