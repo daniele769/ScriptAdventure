@@ -1,4 +1,6 @@
 # ScriptAdventure
+![Immagine 2024-03-17 212017](https://github.com/daniele769/ScriptAdventure/assets/151225721/b20d1606-27fa-48f9-b4e2-7d614e436728)
+
 ## Descrizione
 
 Questo progetto è stato realizzato come progetto di laurea triennale in Scienze e Tecnologie Informatiche presso l'Università degli Studi della Basilicata. L'obbiettivo era quello di creare un videogioco OpenSource che 
@@ -14,6 +16,9 @@ I professori potranno impostare le sessioni di esercizi attraverso una pagina di
 Sarà anche possibile configurare il tutto attraverso un file esterno che verrà creato automanticamente al percorso "Documents\ScriptAdventure\", in questo modo all'avvio il gioco verrà lanciato già con la modalità esercizio avviata e configurata.
 Alla fine della sessione di esercizi sarà possibile visionare una pagina di riepilogo che mostrerà il tempo impiegato e numero di errori per categoria, in modo da capire in quali argomenti sono presenti più lacune. 
 Importando il progetto sarà possibile creare nuovi esercizi o aggiungere nuove categorie, per capire come fare basta visionare la documentazione.
+![Modalità esercizio setup](https://github.com/daniele769/ScriptAdventure/assets/151225721/0158486f-8b4e-4fa2-b293-67e9555d527a) ![EsempioEsercizio](https://github.com/daniele769/ScriptAdventure/assets/151225721/93537b96-7f06-4190-830b-ca794e88d835)
+
+
 
 ## Modalità Campagna
 
@@ -24,6 +29,9 @@ A questo punto potrà aprire anche una pagina di documentazione attraverso la qu
 programmazione implementato nella ScriptConsole.
 Sono presenti attualmente solo 2 livelli demo che introducono il giocatore alle meccaniche e mostrano l'incipit della storia, all'interno del progetto è però presente tutto il materiale necessario per creare nuovi livelli, aggiungere funzionalità alla ScriptConsole 
 e creare nuovi oggetti interagibili. Per capire come fare basta fare riferimento alla documentazione.
+![ConsoleDoc](https://github.com/daniele769/ScriptAdventure/assets/151225721/2c0b8076-be4a-42ec-b8b7-da8968ca2e56) ![Doc](https://github.com/daniele769/ScriptAdventure/assets/151225721/a389efbe-470c-4c86-9201-f55e6d5a916b)
+
+
 
 ## BrokerMQtt
 
