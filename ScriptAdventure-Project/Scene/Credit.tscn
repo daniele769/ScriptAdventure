@@ -71,148 +71,25 @@ text = "Università degli studi della Basilicata"
 label_settings = ExtResource("2_06ehs")
 horizontal_alignment = 1
 
-[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/VBoxContainer"]
+[node name="VBoxContainer2" type="VBoxContainer" parent="PanelContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_stretch_ratio = 0.4
 
-[node name="TextureRect" type="TextureRect" parent="PanelContainer/VBoxContainer/VBoxContainer"]
+[node name="TextureRect" type="TextureRect" parent="PanelContainer/VBoxContainer/VBoxContainer2"]
 layout_mode = 2
 texture = ExtResource("2_41jn3")
 expand_mode = 5
 
-[node name="Raw1" type="HBoxContainer" parent="PanelContainer/VBoxContainer/VBoxContainer"]
+[node name="Raw1" type="HBoxContainer" parent="PanelContainer/VBoxContainer/VBoxContainer2"]
 layout_mode = 2
 size_flags_horizontal = 4
 
-[node name="Label" type="Label" parent="PanelContainer/VBoxContainer/VBoxContainer/Raw1"]
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer/VBoxContainer2/Raw1"]
 layout_mode = 2
 size_flags_horizontal = 10
 text = "Progetto di tesi 
 Laurea Triennale"
-label_settings = ExtResource("2_06ehs")
-horizontal_alignment = 1
-
-[node name="VBoxContainer2" type="VBoxContainer" parent="PanelContainer/VBoxContainer"]
-layout_mode = 2
-alignment = 1
-
-[node name="Label" type="Label" parent="PanelContainer/VBoxContainer/VBoxContainer2"]
-layout_mode = 2
-
-[node name="Label2" type="Label" parent="PanelContainer/VBoxContainer/VBoxContainer2"]
-layout_mode = 2
-
-[node name="Label3" type="Label" parent="PanelContainer/VBoxContainer/VBoxContainer2"]
-layout_mode = 2
-
-[node name="Label4" type="Label" parent="PanelContainer/VBoxContainer/VBoxContainer2"]
-layout_mode = 2
-
-[node name="GridContainer" type="GridContainer" parent="PanelContainer/VBoxContainer/VBoxContainer2"]
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 2
-size_flags_stretch_ratio = 0.4
-columns = 3
-
-[node name="Label" type="Label" parent="PanelContainer/VBoxContainer/VBoxContainer2/GridContainer"]
-layout_mode = 2
-text = "                   "
-
-[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/VBoxContainer/VBoxContainer2/GridContainer"]
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 6
-
-[node name="Raw1" type="HBoxContainer" parent="PanelContainer/VBoxContainer/VBoxContainer2/GridContainer/VBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 8
-
-[node name="Label" type="Label" parent="PanelContainer/VBoxContainer/VBoxContainer2/GridContainer/VBoxContainer/Raw1"]
-layout_mode = 2
-size_flags_horizontal = 10
-text = "Sviluppato da: "
-label_settings = ExtResource("2_06ehs")
-horizontal_alignment = 2
-
-[node name="Raw2" type="HBoxContainer" parent="PanelContainer/VBoxContainer/VBoxContainer2/GridContainer/VBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 8
-
-[node name="Label" type="Label" parent="PanelContainer/VBoxContainer/VBoxContainer2/GridContainer/VBoxContainer/Raw2"]
-layout_mode = 2
-size_flags_horizontal = 10
-text = "Relatore: "
-label_settings = ExtResource("2_06ehs")
-horizontal_alignment = 2
-
-[node name="Raw3" type="HBoxContainer" parent="PanelContainer/VBoxContainer/VBoxContainer2/GridContainer/VBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 8
-
-[node name="Label" type="Label" parent="PanelContainer/VBoxContainer/VBoxContainer2/GridContainer/VBoxContainer/Raw3"]
-layout_mode = 2
-size_flags_horizontal = 10
-text = "Risorse Audio:"
-label_settings = ExtResource("2_06ehs")
-horizontal_alignment = 2
-
-[node name="VBoxContainer2" type="VBoxContainer" parent="PanelContainer/VBoxContainer/VBoxContainer2/GridContainer"]
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 6
-
-[node name="Raw1" type="HBoxContainer" parent="PanelContainer/VBoxContainer/VBoxContainer2/GridContainer/VBoxContainer2"]
-layout_mode = 2
-size_flags_horizontal = 0
-
-[node name="Label" type="Label" parent="PanelContainer/VBoxContainer/VBoxContainer2/GridContainer/VBoxContainer2/Raw1"]
-layout_mode = 2
-size_flags_horizontal = 10
-text = "             Venafro Daniele (Game design, Game Programming, 2D Artist)"
-label_settings = ExtResource("2_06ehs")
-horizontal_alignment = 2
-
-[node name="Raw2" type="HBoxContainer" parent="PanelContainer/VBoxContainer/VBoxContainer2/GridContainer/VBoxContainer2"]
-layout_mode = 2
-size_flags_horizontal = 0
-
-[node name="Label" type="Label" parent="PanelContainer/VBoxContainer/VBoxContainer2/GridContainer/VBoxContainer2/Raw2"]
-layout_mode = 2
-size_flags_horizontal = 10
-text = "             Prof. Santomauro Michele (Supervisione)"
-label_settings = ExtResource("2_06ehs")
-horizontal_alignment = 2
-
-[node name="Raw3" type="HBoxContainer" parent="PanelContainer/VBoxContainer/VBoxContainer2/GridContainer/VBoxContainer2"]
-layout_mode = 2
-size_flags_horizontal = 0
-
-[node name="Label" type="Label" parent="PanelContainer/VBoxContainer/VBoxContainer2/GridContainer/VBoxContainer2/Raw3"]
-layout_mode = 2
-size_flags_horizontal = 10
-text = "             https://pixabay.com/"
-label_settings = ExtResource("2_06ehs")
-horizontal_alignment = 2
-
-[node name="Raw2" type="HBoxContainer" parent="PanelContainer/VBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 4
-
-[node name="Label" type="Label" parent="PanelContainer/VBoxContainer/Raw2"]
-layout_mode = 2
-size_flags_horizontal = 10
-label_settings = ExtResource("2_06ehs")
-horizontal_alignment = 1
-
-[node name="Raw3" type="HBoxContainer" parent="PanelContainer/VBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 4
-
-[node name="Label" type="Label" parent="PanelContainer/VBoxContainer/Raw3"]
-layout_mode = 2
-size_flags_horizontal = 10
 label_settings = ExtResource("2_06ehs")
 horizontal_alignment = 1
 
@@ -224,5 +101,159 @@ size_flags_horizontal = 4
 layout_mode = 2
 size_flags_horizontal = 10
 text = "Anno Accademico 2022-2023"
+label_settings = ExtResource("2_06ehs")
+horizontal_alignment = 1
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer/VBoxContainer3"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 22
+
+[node name="Label2" type="Label" parent="PanelContainer/VBoxContainer/VBoxContainer3"]
+visible = false
+layout_mode = 2
+
+[node name="Label3" type="Label" parent="PanelContainer/VBoxContainer/VBoxContainer3"]
+visible = false
+layout_mode = 2
+
+[node name="Label4" type="Label" parent="PanelContainer/VBoxContainer/VBoxContainer3"]
+visible = false
+layout_mode = 2
+
+[node name="GridContainer" type="GridContainer" parent="PanelContainer/VBoxContainer/VBoxContainer3"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 2
+size_flags_stretch_ratio = 0.4
+columns = 3
+
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer/VBoxContainer3/GridContainer"]
+layout_mode = 2
+text = "                   "
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/VBoxContainer/VBoxContainer3/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+
+[node name="Raw1" type="HBoxContainer" parent="PanelContainer/VBoxContainer/VBoxContainer3/GridContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer/VBoxContainer3/GridContainer/VBoxContainer/Raw1"]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "Sviluppato da: "
+label_settings = ExtResource("2_06ehs")
+horizontal_alignment = 2
+
+[node name="Raw2" type="HBoxContainer" parent="PanelContainer/VBoxContainer/VBoxContainer3/GridContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer/VBoxContainer3/GridContainer/VBoxContainer/Raw2"]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "Relatore: "
+label_settings = ExtResource("2_06ehs")
+horizontal_alignment = 2
+
+[node name="Raw3" type="HBoxContainer" parent="PanelContainer/VBoxContainer/VBoxContainer3/GridContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer/VBoxContainer3/GridContainer/VBoxContainer/Raw3"]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "Risorse Audio:"
+label_settings = ExtResource("2_06ehs")
+horizontal_alignment = 2
+
+[node name="Raw4" type="HBoxContainer" parent="PanelContainer/VBoxContainer/VBoxContainer3/GridContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer/VBoxContainer3/GridContainer/VBoxContainer/Raw4"]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "Addon/Librerie Esterne:
+ 
+ 
+ 
+ 
+ "
+label_settings = ExtResource("2_06ehs")
+horizontal_alignment = 2
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="PanelContainer/VBoxContainer/VBoxContainer3/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+
+[node name="Raw1" type="HBoxContainer" parent="PanelContainer/VBoxContainer/VBoxContainer3/GridContainer/VBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer/VBoxContainer3/GridContainer/VBoxContainer2/Raw1"]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "             Venafro Daniele (Game design, Game Programming, 2D Artist)"
+label_settings = ExtResource("2_06ehs")
+horizontal_alignment = 2
+
+[node name="Raw2" type="HBoxContainer" parent="PanelContainer/VBoxContainer/VBoxContainer3/GridContainer/VBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer/VBoxContainer3/GridContainer/VBoxContainer2/Raw2"]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "             Prof. Santomauro Michele (Supervisione)"
+label_settings = ExtResource("2_06ehs")
+horizontal_alignment = 2
+
+[node name="Raw3" type="HBoxContainer" parent="PanelContainer/VBoxContainer/VBoxContainer3/GridContainer/VBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer/VBoxContainer3/GridContainer/VBoxContainer2/Raw3"]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "             https://pixabay.com/"
+label_settings = ExtResource("2_06ehs")
+horizontal_alignment = 2
+
+[node name="Raw4" type="HBoxContainer" parent="PanelContainer/VBoxContainer/VBoxContainer3/GridContainer/VBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer/VBoxContainer3/GridContainer/VBoxContainer2/Raw4"]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "             - More Effective Godot Coroutines (C#)
+                - Copyright (c) 2023 Teal Rogers, Isar Arason (WeaverDev)
+             - PlayerPrefsUtility (C#)
+                - Copyright (c) 2023 MarcWerk
+             - hivemq-mqtt-client-dotnet
+                - Copyright 2022 HiveMQ GmbH"
+label_settings = ExtResource("2_06ehs")
+
+[node name="Label5" type="Label" parent="PanelContainer/VBoxContainer/VBoxContainer3"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+
+[node name="Raw5" type="HBoxContainer" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer/Raw5"]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "Pubblicato con licenza Apache-2.0 licence
+     - Copyright 2024 Daniele Venafro"
 label_settings = ExtResource("2_06ehs")
 horizontal_alignment = 1
